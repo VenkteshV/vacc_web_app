@@ -3,19 +3,21 @@ import Progress from "./Progress.jsx";
 import Logo from "../images/baseline-check_circle_outline-24px.svg";
 import VaccineImg from "../images/Vaccine_covid.jpg";
 import { Button, ProgressBar, Tabs, Tab } from 'react-bootstrap';
+import FAQ from './FAQ.jsx';
 import _ from 'lodash';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
 
 
-class Upload extends Component {
+class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
       progress: 20,
-      numberVaccinated:1000000
+      numberVaccinated:1000000,
+      shouldRenderFaq: false
     };
-
+    this.renderFaq = this.renderFaq.bind(this);
   }
 
 
@@ -37,6 +39,12 @@ class Upload extends Component {
       );
   }
 
+  renderFaq(key) {
+    if (key=="faq") {
+    console.log("here")
+    this.setState({shouldRenderFaq: !this.state.shouldRenderFaq});
+  }
+}
   renderActions() {
       return (
         <Button
@@ -51,6 +59,7 @@ class Upload extends Component {
  
 
   render() {
+    console.log("renderfaq",this.state.shouldRenderFaq);
     return (
       <div>
 
@@ -68,6 +77,11 @@ class Upload extends Component {
               ))}
             </ul> </div>) : (null)} */}
       </div>
+      { this.state.shouldRenderFaq ?(       <div className="FaqCard">
+  {/* <div className="Content">
+  </div> */}
+  <FAQ/>
+</div>) : ( <div>
       <img className="VaccineImg" src={VaccineImg}/>
       <div><span className="Title">Chennai vaccination drive</span></div>
       <div><span className="Verbiage"> At Chennai, we are on a mission to vaccinate 40 Lakh people to break the chain. 
@@ -78,29 +92,23 @@ class Upload extends Component {
           <div className="Upload">
             {/* <div className="Content">
             </div> */}
-            <div><span className="Completed">{this.state.numberVaccinated} have signed.</span> <soan className="Verbiage">Let's get to 40,00,000</soan></div>
+            <div><span className="Completed">{this.state.numberVaccinated} have signed.</span> <span className="Verbiage">Let's get to 40,00,000</span></div>
 
             <div className="ProgressIndicator">{this.renderProgress()}</div>
             <div className="Actions">{this.renderActions()}</div>
             <div className="Actions"><Button className="Cancel" size="lg"> Not at the moment</Button></div>
           </div>
-         </div>
-         <Tabs defaultActiveKey="profile" className="FaqTabs" id="uncontrolled-tab-example">
-  <Tab eventKey="faq" title="FAQ" className="Faq">
+         </div> </div>  </div>) }
+         <Tabs defaultActiveKey="profile" className="FaqTabs" id="uncontrolled-tab-example" onSelect={this.renderFaq}>
+  <Tab eventKey="faq" title="FAQ" className="Faq" >
   </Tab>
   <Tab eventKey="Privacy policy" title="Privacy policy" className="Privacy">
   </Tab>
-</Tabs>
-
-     
+</Tabs>  
       </div>
-
-      </div>
-    );
-  }
-}
-Upload.propTypes = {
+      ); } }
+Landing.propTypes = {
   fetchBloomVerbs: PropTypes.func,
 };
 
-export default Upload;
+export default Landing;

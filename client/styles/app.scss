@@ -14,7 +14,6 @@ button {
 .VaccineCard {
   text-align: center;
   background-color: rgb(206, 213, 223);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,11 +34,18 @@ button {
 
 .nav-tabs>li{
   width: 50%;
+  text-align: center;
   background-color: cornflowerblue;
 }
 
 .nav-tabs>li>a {
   color: black;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+
+}
+.Questions {
+
 }
 .VaccineImg {
 width: 100%;
@@ -78,7 +84,7 @@ font-size: calc(10px + 2vmin);
   padding-left: 1rem;
 }
 
-.Card {
+.Card,.FaqCard {
   background-color: white;
   padding: 32px;
   width: 100%;
@@ -90,9 +96,20 @@ font-size: calc(10px + 2vmin);
   box-sizing: border-box;
 }
 
+.Answer {
+  font-size: 2.6rem;
+}
+
 .Title {
   font-size: calc(10px + 2vmin);
   color: black;
+}
+.FaqCard {
+  background-color: midnightblue;
+  color: white;
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: calc(10px + 3vmin);
 }
 
 .loader {
