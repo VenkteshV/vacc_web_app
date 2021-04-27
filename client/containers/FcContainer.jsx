@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Upload from '../components/Upload.jsx';
+import Landing from '../components/Landing.jsx';
 import { searchConditions, runExperiment} from '../actions/search';
 const mapStateToProps = (state) => ({
   config: state.config,
@@ -12,6 +12,6 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
     runExperiment,
 }, dispatch);
 
-const FcContainer = connect(mapStateToProps, mapDispatchToProps)(Upload);
+const FcContainer = connect(mapStateToProps, mapDispatchToProps)(Landing);
 
 export default FcContainer;

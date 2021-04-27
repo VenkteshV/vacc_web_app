@@ -24,24 +24,45 @@ button {
 .Cancel {
   background-color: darkblue;
   color: white;
+  border-radius: 25px;
+  width: 300px;
+  font-size: calc(10px + 2vmin);
+
+}
+.FaqTabs {
+  width:100%;
 }
 
+.nav-tabs>li{
+  width: 50%;
+  background-color: cornflowerblue;
+}
+
+.nav-tabs>li>a {
+  color: black;
+}
 .VaccineImg {
 width: 100%;
 }
 .Verbiage {
   font-size: calc(10px + 2vmin);
-color: black
+color: gray;
+display: flex;
+justify-content: center;
 }
 
 .Register {
   background-color: darkblue;
 color: white;
+border-radius: 25px;
+width: 350px;
+font-size: calc(10px + 2vmin);
+
 }
 
 .card_lo {
   background-color: darkblue;
-  padding: 32px;
+  padding: 42px;
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -49,7 +70,7 @@ color: white;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
     0 5px 15px 0 rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
-  font-size: calc(10px + 1vmin);
+  font-size: calc(10px + 2vmin);
   color: white
 
 }
@@ -67,6 +88,11 @@ color: white;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
     0 5px 15px 0 rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
+}
+
+.Title {
+  font-size: calc(10px + 2vmin);
+  color: black;
 }
 
 .loader {
@@ -109,4 +135,7 @@ color: white;
 .label-style {
   margin-top: 66px;
 font-size: 3rem
+}
+.Upload {
+  width:100%;
 }
