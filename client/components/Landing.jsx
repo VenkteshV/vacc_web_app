@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Progress from "./Progress.jsx";
 import Logo from "../images/baseline-check_circle_outline-24px.svg";
-import VaccineImg from "../images/Vaccine_covid.jpg";
+import VaccineImg from "../images/poster.png";
 import { Button, ProgressBar, Tabs, Tab } from 'react-bootstrap';
 import FAQ from './FAQ.jsx';
 import _ from 'lodash';
@@ -51,7 +51,7 @@ class Landing extends Component {
         className="Register"
           onClick={this.uploadFiles}
         >
-          Register
+          Take the vaccination pledge
         </Button>
       );
     }
@@ -84,8 +84,7 @@ class Landing extends Component {
 </div>) : ( <div>
       <img className="VaccineImg" src={VaccineImg}/>
       <div><span className="Title">Chennai vaccination drive</span></div>
-      <div><span className="Verbiage"> At Chennai, we are on a mission to vaccinate 40 Lakh people to break the chain. 
-      We need all of your support to reach this milestone. Register and spread the word</span></div>
+      <div><span className="Verbiage"> We are on a mission to vaccinate 40 Lakh people to break the chain. If you have registered to take the vaccination, plan to register or if you have gotten your vaccination click below to inspire others as well to get vaccinated. </span></div>
       <div className="VaccineCard">
         <div className="Card">
 

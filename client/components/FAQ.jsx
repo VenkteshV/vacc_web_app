@@ -7,14 +7,19 @@ export default class FAQ extends React.Component {
   constructor(props) {
     super(props);
   }
-
+  renderHtml(content) {
+    const reg = /(http:\/\/|https:\/\/)((\w|=|\?|\.|\/|&|-)+)/g;
+    return content.replace(reg, "<a href='$1$2'>$1$2</a>");
+  }
   render() {
       console.log("faqs",faqs);
     return (
 <div>
     {
         faqs.faqs.map(faq => {
-            return (<div><p className="Questions">{faq.question}</p> <p className="Answer">{faq.answer}</p> </div>)
+            let answer = this.renderHtml(faq.answer);
+            return (<div><p className="Questions">{faq.question}</p> <p className="Answer" dangerouslySetInnerHTML={{
+                __html: answer}}></p> </div>)
         })
     }
 </div>

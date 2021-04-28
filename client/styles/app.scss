@@ -1,5 +1,5 @@
 body {
-  font: 100% $font-lato;
+  font-family: 'Baloo Thambi 2', cursive;
   font-weight: 400;
   color: $dark-gray-color;
   letter-spacing: 0.075rem;
@@ -21,7 +21,7 @@ button {
 }
 
 .Cancel {
-  background-color: darkblue;
+  background-color: deepskyblue;
   color: white;
   border-radius: 25px;
   width: 300px;
@@ -58,16 +58,16 @@ justify-content: center;
 }
 
 .Register {
-  background-color: darkblue;
+  background-color: deepskyblue;
 color: white;
 border-radius: 25px;
-width: 350px;
+width: 70%;
 font-size: calc(10px + 2vmin);
 
 }
 
 .card_lo {
-  background-color: darkblue;
+  background-color: deepskyblue;
   padding: 42px;
   width: 100%;
   display: flex;
@@ -107,7 +107,6 @@ font-size: calc(10px + 2vmin);
 .FaqCard {
   background-color: midnightblue;
   color: white;
-  font-family: Poppins;
   font-weight: 300;
   font-size: calc(10px + 3vmin);
 }
