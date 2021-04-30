@@ -50,7 +50,7 @@ class Landing extends Component {
     const shareData = {
       title: 'Po Corona Po',
       text: 'Virus verattunga Natta Kappathunga',
-      url: 'https://developer.mozilla.org',
+      url: 'https://pocoronapo.in',
     }
     navigator.share(shareData);
   }
