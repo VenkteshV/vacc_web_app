@@ -20,7 +20,7 @@ app.use(express.static('dist'));
 app.get('/', function (request, response) {
   response.redirect('index.html');
 });
-const port = process.env.PORT || 3200;
+const port = process.env.PORT || 80;
 app.listen(port, function () {
   console.log(`Application listening on port ${port}`);
 });
