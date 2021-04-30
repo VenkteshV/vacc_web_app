@@ -1,0 +1,54 @@
+// Text alignments
+.u-text--left {
+    text-align: left;
+}
+
+.u-text--center {
+    text-align: center;
+}
+
+// Margins
+.u-margin_below--less {
+    margin-bottom: rem(10);
+}
+
+.u-margin_below {
+    margin-bottom: rem(20);
+}
+
+.u-margin_above {
+    margin-top: rem(20);
+}
+
+.u-margin_left {
+    margin-left: rem(20);
+}
+
+// Text sizes
+.text-size-14 {
+    font-size: rem(14);
+}
+
+// Colors
+.u-color-grey-10 {
+    color: gray;
+}
+
+.u-color--black {
+    color: black !important;
+}
+
+// Position center
+.u-position--center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+}
+
+// Z-index
+.z-index {
+    z-index: -1;
+}

@@ -27,7 +27,7 @@ export default class CancelPage extends React.Component {
         return (
             <div>
                 <div className="CancelCard">
-               <div className = "ReasonLabel"><span className="CancelReason"> Enter the reason why you do not want to get vaccinated.</span></div>
+               <div className = "ReasonLabel"><p className="CancelReason"> Enter the reason why you do not want to get vaccinated.</p></div>
                 <div className = "Form">
                 <form  onSubmit={this.handleSubmit}>
         <div>
