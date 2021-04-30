@@ -7,6 +7,15 @@ body {
   margin: auto;
 }
 
+.flex-container {
+  & > div {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 input,
 textarea,
 button {
@@ -86,12 +95,8 @@ p {
   box-shadow: none;
 }
 .Footer {
-  max-width: 480px;
-  margin: auto;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  max-width: 480px;  
+  position: relative;
   height: rem(50);
 }
 
@@ -178,9 +183,7 @@ width: 100%;
   justify-content: center;
   display: inline-block;
 }
-.Footer {
-  margin-top:13rem;
-}
+
 .FooterTabs {
   margin-top:60rem;
 }
@@ -330,8 +333,7 @@ padding-left:35px;
   font-size: rem(21);
 
   & + div {
-    margin-top: rem(75);
-    padding-bottom: rem(50);
+    margin-top: rem(75);    
   }
 }
 .confidence{
