@@ -16,18 +16,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static('dist'));
-/* istanbul ignore next */
+
 app.get('/', function (request, response) {
-/* istanbul ignore next */
   response.redirect('index.html');
 });
-/* istanbul ignore next */
 const port = process.env.PORT || 3200;
 app.listen(port, function () {
   console.log(`Application listening on port ${port}`);
 });
 
-app.use('/recommend_taxonomy', api_route);
 
 app.use(form_submit_route);
 
