@@ -25,9 +25,11 @@ button {
 
 .Mission {
   padding-top: 5rem;
+  text-align: left;
+  padding-left: 16px;
   padding-bottom: 10rem;
-  font-size: calc(24px + 3vmin) !important;
-
+  color: #6B6B6B !important;
+  font-size: calc(11px + 3vmin) !important;
 }
 .QuestionBlock {
 display: inline-block;
@@ -35,7 +37,10 @@ width:100%;
 padding-top: 10px;
 }
 .faq {
-  padding-left: 28rem;
+  padding-left: 8rem;
+}
+.ReasonLabel {
+  text-align: left;
 }
 .fa-arrow-left {
   float: left !important;
@@ -59,19 +64,21 @@ padding-top: 10px;
 
 }
 .Cancel {
-  color: deepskyblue;
+  color: #00B4F0;
   border-radius: 25px;
-  width: 300px;
-  font-size: calc(10px + 2vmin);
+  width: 90%;
+  font-size: calc(20px + 3vmin);
   display: inline-block;
   align-items: center;
+  font-weight:bold;
   padding-top: 3rem;
 
 }
 .CancelReason {
-  color: black;
+  color: #344356;
   font-size: calc(22px + 3vmin);
-  justify-content: center;
+  justify-content: left;
+  font-weight:600;
 }
 .panel {
   margin-bottom:3px;
@@ -79,13 +86,18 @@ padding-top: 10px;
 .FaqTabs {
   width:80%;
   float: left;
-  background-color: yellow
+  background-color: yellow;
+  text-align: left;
 }
 
 .ChennaiTricolor {
   width: 90%;
   background-color: yellow;
 
+}
+.Latest {
+  text-align: left;
+  padding-left: 35px;
 }
 .TricolorImage {
   width:20%;
@@ -99,15 +111,23 @@ padding-top: 10px;
 
 .nav-tabs>li>a {
   color: black;
-  text-align: center;
+  text-align: left;
   font-size: calc(10px + 2vmin);
-
+  padding-left:35px;
 }
 .Questions {
   font-size:2.4rem;
   font-weight: 600;
   float:left;
 
+}
+
+.progress-bar {
+  font-size: 3rem;
+}
+
+.ProgressText {
+  text-align: left;
 }
 .Completed {
   display: inline-block;
@@ -124,20 +144,33 @@ display: inline-block;
 }
 
 .Register {
-  background-color: deepskyblue;
+  background-color: #00B4F0 ;
 color: white;
-border-radius: 41px;
-width: 70%;
-font-size: calc(10px + 2vmin);
+font-weight: bold;
+border-radius: 70px;
+width: 90%;
+font-size: calc(20px + 2vmin);
 
 }
-
+.Footer {
+  margin-top:13rem;
+}
 .FooterTabs {
-  margin-top:64rem;
+  margin-top:60rem;
 }
+
+.Pledge {
+  text-align:left;
+padding-left:35px;
+
+}
+
+.css-1rtrksz {
+  height: 15rem;
+}
+
 .ReasonText {
   width: 70%;
-  height: 7rem;
   font-size: 5rem;
   margin-top: 10rem;
   border-color: hsl(0,0%,80%);
@@ -149,13 +182,19 @@ font-size: calc(10px + 2vmin);
 
 box-sizing: border-box;
 }
+
+.PledgeText {
+  height: 15rem !important;
+  font-size:7rem
+}
 .Submit,.PledgeSubmit {
-  background-color: deepskyblue;
+  background-color: #00B4F0;
   color: white;
-  border-radius: 41px;
-  width: 70%;
-  font-size: calc(10px + 2vmin);
+  border-radius: 70px;
+  width: 90%;
+  font-size: calc(20px + 2vmin);  
   margin-top:28rem; 
+  font-weight: bold;
 }
 .PledgeSubmit {
   margin-top:4rem; 
@@ -172,7 +211,7 @@ box-sizing: border-box;
 }
 
 .card_lo {
-  background-color: deepskyblue;
+  background-color: #00B4F0;
   padding: 42px;
   width: 100%;
   display: flex;
@@ -182,7 +221,8 @@ box-sizing: border-box;
     0 5px 15px 0 rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
   font-size: calc(16px + 2vmin);
-  color: white
+  color: white;
+  font-weight:bold;
 
 }
 .confidence{
@@ -210,8 +250,6 @@ box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
-    0 5px 15px 0 rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
 }
 .FaqCard {

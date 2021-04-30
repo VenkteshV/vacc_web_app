@@ -42,7 +42,7 @@ export default class PledgePage extends React.Component {
         return (
             <div>
                 <div className="CancelCard">
-               <div><span className="CancelReason"> <ol>
+               <div className ="Pledge"><span className="CancelReason"> <ol>
                    <li>I will get vaccinated or I have been vaccinated.</li>
                    <li>I will encourage others to get vaccinated.</li>
                    <li>I will verify any information around vaccinations before sharing.</li></ol></span></div>
@@ -54,7 +54,7 @@ export default class PledgePage extends React.Component {
           placeholder="Name"
           type="text"
           value={this.state.reason}
-          className="ReasonText"
+          className="ReasonText PledgeText"
           onChange={this.handleNameChange}
           required />
            <Select key={_.uniqueId()} className="Location"
@@ -86,7 +86,7 @@ export default class PledgePage extends React.Component {
           placeholder="Mobile"
           type="text"
           value={this.state.phone}
-          className="ReasonText"
+          className="ReasonText PledgeText"
           onChange={this.handleMobileChange}
           required />
                   <input
@@ -94,7 +94,7 @@ export default class PledgePage extends React.Component {
           placeholder="OTP"
           type="text"
           value={this.state.otp}
-          className="ReasonText"
+          className="ReasonText PledgeText"
           onChange={this.handleOTPChange}
           required />
     <Button className="PledgeSubmit" type="submit">  <div className="PledgeButton">I take the Pledge</div></Button>
