@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 import config from './config';
+import pledge from'./pledge';
 
 
 const combinedReducers = combineReducers({
-  config
+  config,
+  pledge
 });
 
 export default combinedReducers;
