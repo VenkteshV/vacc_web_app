@@ -54,7 +54,7 @@ class Landing extends Component {
     var ctx = canvas.getContext('2d');
 
     var vacImg = document.getElementsByClassName("VaccineImg")[0];
-    ctx.drawImage(img, 0, 0);
+    ctx.drawImage(vacImg, 0, 0);
 
     // ctx.fillStyle = 'blue';
     // ctx.fillRect(0,0,450,450);
