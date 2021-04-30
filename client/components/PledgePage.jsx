@@ -101,7 +101,7 @@ export default class PledgePage extends React.Component {
           className="ReasonText PledgeText"
           onChange={this.handleOTPChange}
           required /> */}
-    <Button className="PledgeSubmit" type="submit">  <div className="PledgeButton">I take the Pledge</div></Button>
+    <Button className="PledgeSubmit" type="submit">  <div className="PledgeButton">Next</div></Button>
     </div>
   </form>
   </div>
