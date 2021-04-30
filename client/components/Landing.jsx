@@ -58,13 +58,13 @@ class Landing extends Component {
 
     ctx.textAlign = 'center';
     const x = canvas.width / 2;
-    ctx.font = '16pt Baloo-Thambi-2';
+    ctx.font = "16pt 'Baloo Thambi 2'";
     ctx.fillStyle = 'white';
     ctx.fillText("Thank you", x, 70);
     ctx.fillText("for joining the drive to", x, 194);
     ctx.fillText("flatten the curve", x, 221);
-    ctx.font = 'bold 28pt Baloo-Thambi-2';
-    ctx.fillText(this.props.latestUser, x, 221);
+    ctx.font = "bold 28pt 'Baloo Thambi 2'";
+    ctx.fillText(this.props.latestUser, x, 118);
 
     // ctx.fillStyle = 'blue';
     // ctx.fillRect(0,0,450,450);
