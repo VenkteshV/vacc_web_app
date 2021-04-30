@@ -1,8 +1,10 @@
 'use strict';
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
+const { rootLimiter } = require('./utils/limiters');
 const submit_pledge_route = require('./routes/submitpledge');
 const submit_excuse_route = require('./routes/submitexcuse');
 const get_progress_route = require('./routes/getprogress');
@@ -16,7 +18,7 @@ app.use(bodyParser.json());
 
 app.use(express.static('dist'));
 
-app.get('/', function (request, response) {
+app.get('/', rootLimiter, function (request, response) {
   response.redirect('index.html');
 });
 const port = process.env.PORT || 80;
@@ -31,8 +33,8 @@ app.use(submit_excuse_route);
 
 app.use(get_progress_route);
 
-app.use(send_otp_route);
+// app.use(send_otp_route);
 
-app.use(verify_otp_route);
+// app.use(verify_otp_route);
 
 module.exports = app;

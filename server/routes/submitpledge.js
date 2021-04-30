@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const dbUtil = require('../utils/db_utils');
+const { formLimiter } = require('../utils/limiters');
 
-router.post("/submitpledge", async function (req,res) {
+router.post("/submitpledge", formLimiter, async function (req,res) {
     console.log("form submit route hit");
     try {
         const { name, phone_no, pin_code } = req.body;

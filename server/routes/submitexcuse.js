@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const dbUtil = require('../utils/db_utils');
+const { formLimiter } = require('../utils/limiters');
 
-router.post("/submitexcuse", async function (req,res) {
+router.post("/submitexcuse", formLimiter,  async function (req,res) {
     console.log("form submit excuse route hit");
     const { excuse } = req.body;
     console.log(req.body);

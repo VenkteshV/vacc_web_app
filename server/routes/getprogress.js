@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const dbUtil = require('../utils/db_utils');
+const { apiLimiter } = require('../utils/limiters');
 
-
-router.get("/getprogress", async function (req,res) {
+router.get("/getprogress", apiLimiter, async function (req,res) {
     try {
         console.log("get progress route hit");
         const theCount = await dbUtil.getRegisterCount();
