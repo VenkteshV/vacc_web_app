@@ -132,6 +132,9 @@ padding-top: 10px;
 .Completed {
   display: inline-block;
 }
+.Completed {
+  display: inline-block;
+}
 .VaccineImg {
 width: 100%;
 }
@@ -195,6 +198,45 @@ box-sizing: border-box;
   font-size: calc(20px + 2vmin);  
   margin-top:28rem; 
   font-weight: bold;
+}
+.PledgeSubmit {
+  margin-top:4rem; 
+
+}
+.PledgeButton {
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+.PledgeQuestion {
+  font-size:2.4rem;
+  font-weight: bold;
+  padding-top: 30px;
+}
+
+.FooterTabs {
+  margin-top:64rem;
+}
+.ReasonText {
+  width: 70%;
+  height: 7rem;
+  font-size: 5rem;
+  margin-top: 10rem;
+  border-color: hsl(0,0%,80%);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  outline: 0 !important;
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.08), 0 5px 15px 0 rgba(0,0,0,0.08);
+
+box-sizing: border-box;
+}
+.Submit,.PledgeSubmit {
+  background-color: deepskyblue;
+  color: white;
+  border-radius: 41px;
+  width: 70%;
+  font-size: calc(10px + 2vmin);
+  margin-top:28rem; 
 }
 .PledgeSubmit {
   margin-top:4rem; 
