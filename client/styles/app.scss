@@ -104,14 +104,14 @@ p {
   width:80%;
   height: 100%;
   float: left;
-  background-color: yellow;
+  background-color: #FEEF05;
   display: flex;
   align-items: center;
 }
 
 .ChennaiTricolor {
   width: 90%;
-  background-color: yellow;
+  background-color: #FEEF05;;
 
 }
 .Latest {
@@ -124,7 +124,7 @@ p {
   width:20%;
   height: 100%;
   float: right;
-  background-color: yellow;
+  background-color: #FEEF05;
 }
 .nav {
   width: 100%;
@@ -132,7 +132,7 @@ p {
 .nav-tabs>li{
   width: 90%;
   text-align: center;
-  background-color: yellow;
+  background-color: #FEEF05;
 }
 
 .nav-tabs>li>a {
@@ -365,7 +365,7 @@ padding-left:35px;
   justify-content: center;
 }
 .FaqCard {
-  background-color: yellow !important;
+  background-color: #FEEF05 !important;
   padding: 20px;
   width: 100%;
   display: inline-block;
@@ -429,6 +429,10 @@ font-size: 3rem
 }
 .Upload {
   width:100%;
+}
+
+#uncontrolled-tab-example-tab-faq {
+  background-color: #FEEF05;
 }
 
 .btn {
