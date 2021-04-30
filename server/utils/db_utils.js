@@ -9,25 +9,7 @@ const pool = new Pool({
 
 /*
 
-// age groups 
-// 0 - 0-17
-// 1 - 18-24
-// 2 - 25-34
-// 3 - 35-44
-// 4 - Above 45
-
-// create table age_groups(
-//     id int primary key not null,
-//     val_text varchar(10) not null
-// );
-
-// insert into age_groups (id, val_text)
-// values (0, '0-17'),
-//     (1, '18-24'),
-//     (2, '25-34'),
-//     (3, '35-44'),
-//     (4, 'Above 45');
-
+CREATE DATABASE oosipodudb;
 
 CREATE TABLE pledgers(
     reg_no SERIAL,
@@ -146,3 +128,26 @@ module.exports.putExcuse = async function(excuse) {
        
    }
 }
+
+
+
+/// some unused scripts
+// age groups 
+// 0 - 0-17
+// 1 - 18-24
+// 2 - 25-34
+// 3 - 35-44
+// 4 - Above 45
+
+// create table age_groups(
+//     id int primary key not null,
+//     val_text varchar(10) not null
+// );
+
+// insert into age_groups (id, val_text)
+// values (0, '0-17'),
+//     (1, '18-24'),
+//     (2, '25-34'),
+//     (3, '35-44'),
+//     (4, 'Above 45');
+
