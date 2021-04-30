@@ -253,6 +253,20 @@ padding-left:35px;
   color: white;
 }
 
+.TaskForce {
+
+  font-family: Baloo Thambi 2;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 32px;
+/* or 200% */
+
+text-decoration-line: underline;
+
+color: #1D1D1D;
+}
+
 .BadgeConclusion {
   position: absolute;
   z-index: 979;
@@ -370,6 +384,11 @@ padding-left:35px;
   width: 100%;
   display: inline-block;
 }
+.Volunteers {
+text-align: center;
+padding-top: 5px;
+margin-bottom: 4px;
+}
 .fa,.fa-angle-up {
   font-size: 2.8rem;
   padding-left:100px;
@@ -474,7 +493,14 @@ font-size: 3rem
   color: #666161;
   font-weight: 500;
 }
-
+.unordered-list {
+  line-height: 1.5;
+  text-align: left;
+  margin-left: rem(15);
+  font-size: rem(14);
+  color: #666161;
+  font-weight: 500;
+}
 .panel-heading {
   background-color: white !important;
 }
