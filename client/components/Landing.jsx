@@ -6,6 +6,7 @@ import VisitAgainImg from "../images/visit_again.png"
 import ChennaiTricolor from '../images/chennai_tricolor.png';
 import { Button, ProgressBar, Tabs, Tab } from 'react-bootstrap';
 import FAQ from './FAQ.jsx';
+import About from './About.jsx';
 import _ from 'lodash';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
@@ -40,10 +41,14 @@ class Landing extends Component {
     this.toggleCancel = this.toggleCancel.bind(this);
     this.renderPledgeForm = this.renderPledgeForm.bind(this);
     this.togglePledge = this.togglePledge.bind(this);
+    this.shareBadge = this.shareBadge.bind(this);
   }
 
 
 
+  shareBadge() {
+    
+  }
 
 
   renderCancel() {
@@ -157,6 +162,12 @@ class Landing extends Component {
           <span className="Badgebottom">Oosi Podu pledge <br/></span> 
           <span className="BadgeMiddle">Virus a verattunga. Natta Kappathunga.<br/> </span> 
           <span className="BadgeBottomConclusion">Visit oosipodu.in</span>
+          <Button
+        className="Share"
+        onClick={this.shareBadge}
+      >
+        <div className="PledgeButton"> Share </div>
+      </Button>
            </div>
         ) :(this.state.shouldRenderPledgeForm ? (<div> <div className="card_lo">
               <svg onClick={this.togglePledge} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -175,10 +186,10 @@ class Landing extends Component {
              <svg onClick={this.toggleFaq} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20 10C20 9.30964 19.4404 8.75 18.75 8.75H4.81263L10.9062 2.6564C11.4043 2.15835 11.3971 1.34869 10.8904 0.859505C10.3961 0.38238 9.61069 0.389309 9.12492 0.87508L0.0990063 9.90099C0.0443264 9.95567 0.0443268 10.0443 0.0990067 10.099L9.12306 19.1231C9.60738 19.6074 10.3926 19.6074 10.8769 19.123C11.3596 18.6403 11.3614 17.8581 10.8808 17.3732L4.81263 11.25H18.75C19.4404 11.25 20 10.6904 20 10Z" fill="white"/>
             </svg>
-             <span className="faq u-position--center z-index"> FAQ</span> </div>
+             <span className="faq u-position--center z-index"> About Us</span> </div>
             {/* <div className="Content">
   </div> */}
-            <FAQ />
+            <About />
           </div>) : (<div> <div className="card_lo"> Po Corona Po </div> <div>
             <img className="VaccineImg" src={VaccineImg} />
 
@@ -205,7 +216,7 @@ class Landing extends Component {
         { this.props.renderBadge ? (null) : (
         <div className={`${FooterClassName}`}>
           <Tabs defaultActiveKey="profile" className="FaqTabs" id="uncontrolled-tab-example" onSelect={this.renderFaq}>
-            <Tab eventKey="faq" title="FAQ" className="Faq" >
+            <Tab eventKey="faq" title="About Us" className="Faq" >
             </Tab>
             {/* <Tab eventKey="Privacy policy" className="Privacy">
   </Tab> */}
