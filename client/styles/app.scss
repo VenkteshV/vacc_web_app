@@ -3,6 +3,8 @@ body {
   font-weight: 400;
   color: $dark-gray-color;
   letter-spacing: rem(0.5);
+  max-width: 480px;
+  margin: auto;
 }
 
 input,
@@ -84,6 +86,8 @@ p {
   box-shadow: none;
 }
 .Footer {
+  max-width: 480px;
+  margin: auto;
   position: fixed;
   left: 0;
   right: 0;
@@ -225,6 +229,8 @@ padding-left:35px;
 }
 
 .card_lo {
+  max-width: 480px;
+  margin: auto;
   position: fixed;
   top: 0;
   left: 0;
