@@ -47,9 +47,12 @@ class Landing extends Component {
 
 
   shareBadge() {
+    const fileArray = [VisitAgainImg];
+    fileArray.freeze();
     const shareData = {
+      files: fileArray,
       title: 'Po Corona Po',
-      text: 'Virus verattunga Natta Kappathunga',
+      text: 'Virus Verattunga Natta Kappathunga',
       url: 'https://pocoronapo.in',
     }
     navigator.share(shareData);
