@@ -3,8 +3,6 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-const api_route = require('./routes/recommend');
-
 const submit_pledge_route = require('./routes/submitpledge');
 const submit_excuse_route = require('./routes/submitexcuse');
 const get_progress_route = require('./routes/getprogress');
