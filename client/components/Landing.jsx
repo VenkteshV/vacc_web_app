@@ -56,6 +56,16 @@ class Landing extends Component {
     var vacImg = document.getElementsByClassName("VaccineImg")[0];
     ctx.drawImage(vacImg, 0, 0);
 
+    ctx.textAlign = 'center';
+    const x = canvas.width / 2;
+    ctx.font = '16pt Baloo-Thambi-2';
+    ctx.fillStyle = 'white';
+    ctx.fillText("Thank you", x, 70);
+    ctx.fillText("for joining the drive to", x, 194);
+    ctx.fillText("flatten the curve", x, 221);
+    ctx.font = 'bold 28pt Baloo-Thambi-2';
+    ctx.fillText(this.props.latestUser, x, 221);
+
     // ctx.fillStyle = 'blue';
     // ctx.fillRect(0,0,450,450);
     // ctx.fillStyle = 'white';
