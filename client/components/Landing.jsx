@@ -119,7 +119,7 @@ class Landing extends Component {
         className="Register"
         onClick={this.renderPledgeForm}
       >
-        <div className="PledgeButton"> Take the Oosi Podu Pledge </div>
+        <div className="PledgeButton"> Virus a verattunga </div>
       </Button>
     );
   }
@@ -134,7 +134,7 @@ class Landing extends Component {
     let minutesDifference2= Math.floor(time_diff2/1000/60);
 
     const FooterClassName = this.state.shouldRenderCancel ? 'FooterTabs': 'Footer';
-    console.log("renderfaq", this.props.renderNegBadge);
+    console.log("renderfaq", this.props.renderBadge);
     return (
       <div>
 
@@ -151,7 +151,14 @@ class Landing extends Component {
                 </li>
               ))}
             </ul> </div>) : (null)} */}
-        {this.props.renderNegBadge ? (<img className="VaccineImg" src={VisitAgainImg}></img>) :(this.state.shouldRenderPledgeForm ? (<div> <div className="card_lo">
+        {this.props.renderBadge ? (<div><img className="VaccineImg" src={VisitAgainImg}></img>
+        <span className="BadgeText"> Thank you <br /> <span className="BadgeUser">{this.props.latestUser} <br />  </span></span>
+          <span className="BadgeConclusion">for joining the drive to flatten the curve.</span>
+          <span className="Badgebottom">Oosi Podu pledge <br/></span> 
+          <span className="BadgeMiddle">Virus a verattunga. Natta Kappathunga.<br/> </span> 
+          <span className="BadgeBottomConclusion">Visit oosipodu.in</span>
+           </div>
+        ) :(this.state.shouldRenderPledgeForm ? (<div> <div className="card_lo">
             <i onClick={this.togglePledge} className="fa fa-arrow-left"></i>
             <span className="u-position--center z-index"> The Oosi Podu Pledge</span> </div>
             <PledgePage persistData ={this.props.persistData}/>
@@ -164,7 +171,7 @@ class Landing extends Component {
             {/* <div className="Content">
   </div> */}
             <FAQ />
-          </div>) : (<div> <div className="card_lo"> Oosi Podu </div> <div>
+          </div>) : (<div> <div className="card_lo"> Po Corona Po </div> <div>
             <img className="VaccineImg" src={VaccineImg} />
 
             <div className="VaccineCard">
@@ -180,14 +187,14 @@ class Landing extends Component {
                   <p className="u-text--left u-margin_above u-margin_left text-size-14">
                   <span className="Completed u-margin_left"> {this.props.config.progressData.response.recents[1].name}
                   <span className="u-color-grey-10"> signed {minutesDifference2} minutes ago</span></span> </p>
-                  <div className="u-text--left"><span className="Verbiage Mission"> We are on a mission to vaccinate 40 Lakh people to break the chain. If you have registered to get vaccinated, plan to register or if you have gotten your vaccination, click below to inspire others as well to get vaccinated. </span></div>
+                  <div className="u-text--left"><span className="Verbiage Mission"> Namma Natta Namma Dhaan Kapathanam. Let’s all sign this to start a movement that will inspire everyone to follow all the basic prevention against corona to fight the virus.  </span></div>
                   
                   <div className="Actions">{this.renderActions()}</div>
                   
-                  <button type="button" className="Cancel" onClick={this.renderCancel}>  Not at the moment</button>
+                  {/* <button type="button" className="Cancel" onClick={this.renderCancel}>  Not at the moment</button> */}
                 </div>
               </div> </div>  </div> </div>))))}
-        { this.props.renderNegBadge ? (null) : (
+        { this.props.renderBadge ? (null) : (
         <div className={`${FooterClassName}`}>
           <Tabs defaultActiveKey="profile" className="FaqTabs" id="uncontrolled-tab-example" onSelect={this.renderFaq}>
             <Tab eventKey="faq" title="FAQ" className="Faq" >
@@ -207,7 +214,8 @@ class Landing extends Component {
 Landing.propTypes = {
   persistData: PropTypes.func,
   triggerExcuse: PropTypes.func,
-  renderNegBadge: PropTypes.bool,
+  renderBadge: PropTypes.bool,
+  latestUser: PropTypes.string,
   progressData: PropTypes.object
 };
 

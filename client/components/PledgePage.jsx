@@ -55,10 +55,13 @@ export default class PledgePage extends React.Component {
                <div>
                    <span className="CancelReason"> 
                         <ol className="ordered-list">
-                            <li>I will get vaccinated or I have been vaccinated.</li>
-                            <li>I will encourage others to get vaccinated.</li>
-                            <li>I will verify any information around vaccinations before sharing.</li>
+                            <li>Masku Podu. Oosi Podu.</li>
+                            <li>Unverified Messages Forward Pannadhe.</li>
+                            <li>Konjam Thalli Nillu.</li>
                         </ol>
+                       <span className="Comment">Idha Ellam Therunjavannukum.  <br/>
+                        Theriyadha Vannukum Sollu.
+                        </span> 
                     </span>
                 </div>
                 <div className = "Form">

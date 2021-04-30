@@ -25,7 +25,8 @@ export function* submitPledge(pledgeAction) {
   if (response.response.success===true) {
     yield put({
       type: actions.RENDER_BADGE,
-      renderBadge: response.response.success
+      renderBadge: response.response.success,
+      latestUser: pledgeAction.payload.payload.name
     });
   }
 }

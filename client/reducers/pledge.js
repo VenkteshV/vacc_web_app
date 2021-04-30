@@ -6,6 +6,7 @@ const pledge = (state = {}, action) => {
   case actions.RENDER_BADGE:
     return Object.assign({}, state, {
         renderBadge: action.renderBadge,
+        latestUser:action.latestUser
     });
   default:
     return state;
