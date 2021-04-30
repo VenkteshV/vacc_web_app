@@ -28,11 +28,63 @@ export default class FAQ extends React.Component {
    </ol>
    <p className = "PledgeAnswer ">Idha Ellam Therunjavannukum. Theriyadha Vannukum Sollu.  </p>
     <p className="PledgeQuestion">Virus a verattunga. Natta Kappathunga.</p>
-   <p className="PledgeQuestion"> We already know we need to get vaccinated, so why this pledge?  </p> 
 
-<p className = "PledgeAnswer"> While several of us are in the process or have registered to get vaccinations, there are still a lot of people who are thinking twice about getting vaccinated. By taking this simple pledge and sharing with your friends, you are helping build a conversation around getting vaccinated and encouraging more people to get vaccinated.
-While we are already hearing this from our government, health experts, and news media... the Oosi Podu pledge hopes to use the power of friendship and social media to help reach 40 Lakh vaccinations in our city. 
-    </p>
+   <p className="PledgeQuestion">Contributors </p>
+   <p className="PledgeAnswer">We are coordinating across various NGOs, government officials, and citizens to help fight the biggest crisis we have faced since Indian Independence.</p>
+
+    <p className="PledgeQuestion Volunteers">200+ volunteers.</p>
+    <p className="PledgeQuestion Volunteers"> 9 Volunteer Taskforces</p>
+
+    <p className="TaskForce">Chennai COVID Volunteer Taskforce </p>
+    <p className="TaskForce">COVID19 Help - Chennai</p>
+
+    <ul className="unordered-list">
+    <li>Vijay Anand, Chennai Tricolor Initiative</li>
+<li>Vikram Ravi, Chennai Tricolor Initiative</li>
+<li>Renuka Jaypal, Chennai Tricolor Initiative</li>
+<li>Fazil Badrudeen, Chennai Tricolor Initiative</li>
+<li>Mahadevan Jayaram, Chennai Tricolor Initiative </li>
+<li>Siddharth, Chennai Tricolor Initiative </li>
+<li>Ravi Kumar, Chennai Tricolor Initiative </li>
+<li>Divya Sharma, Chennai Tricolor Initiative </li>
+<li>Venktesh, Tech For Cities</li>
+<li>Kumaresh Chinnaswamy, Tech For Cities </li>
+<li>Siddharth, Tech For Cities </li>
+<li>David, Tech For Cities </li>
+<li>Ashok, Tech For Cities </li>
+<li>Ratheesh, SPI Edge Team </li>
+<li>Sakthivel Pannerselvam, the6.in </li>
+<li>Amar Ramesh, Studio A </li>
+<li>Deepak, Prayogshala</li>
+<li>Sachin, Falcon.io </li>
+<li>Ramki, Thoughtworks </li>
+<li>Saradha Ramani, Rotary</li>
+<li>Wilfred Davidar, IAS Retd </li>
+
+<li>Shravan Shankar, AtWorks (The Binary Workshop) </li>
+<li>Murshitha Sheeren </li>
+<li>Harshini </li>
+<li>Jayalakshmi Krishnan</li>
+<li>Petsfamilia</li>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </ul>
    </div>
 </div>
         );
