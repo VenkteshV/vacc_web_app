@@ -20,8 +20,11 @@ export default class CancelPage extends React.Component {
         this.setState({reason:event.target.value});
     }
     handleSubmit(event) {
-        this.setState({reason:event.target.value});
-        event.preventDefault()
+        event.preventDefault();
+        const payload = {
+            'excuse': this.state.reason,
+        }
+        this.props.triggerExcuse(payload);
     }
     render() {
         return (
@@ -52,5 +55,5 @@ export default class CancelPage extends React.Component {
     }
 }
 CancelPage.propTypes = {
-
+    triggerExcuse : PropTypes.func,
 };

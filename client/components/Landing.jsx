@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Progress from "./Progress.jsx";
 import Logo from "../images/baseline-check_circle_outline-24px.svg";
 import VaccineImg from "../images/Banner.png";
+import VisitAgainImg from "../images/visit_again.png"
 import ChennaiTricolor from '../images/chennai_tricolor.png';
 import { Button, ProgressBar, Tabs, Tab } from 'react-bootstrap';
 import FAQ from './FAQ.jsx';
@@ -124,7 +125,7 @@ class Landing extends Component {
 
   render() {
     const FooterClassName = this.state.shouldRenderCancel ? 'FooterTabs': 'Footer';
-    console.log("renderfaq", this.state.shouldRenderFaq);
+    console.log("renderfaq", this.props.renderNegBadge);
     return (
       <div>
 
@@ -141,7 +142,7 @@ class Landing extends Component {
                 </li>
               ))}
             </ul> </div>) : (null)} */}
-        {this.state.shouldRenderPledgeForm ? (<div> <div className="card_lo">
+        {this.props.renderNegBadge ? (<img className="VaccineImg" src={VisitAgainImg}></img>) :(this.state.shouldRenderPledgeForm ? (<div> <div className="card_lo">
             <i onClick={this.togglePledge} className="fa fa-arrow-left"></i>
             <span className="u-position--center z-index"> The Oosi Podu Pledge</span> </div>
             <PledgePage persistData ={this.props.persistData}/>
@@ -149,7 +150,7 @@ class Landing extends Component {
           <div> <div className="card_lo">
             <i onClick={this.toggleCancel} className="fa fa-arrow-left"></i>
             <span className="u-position--center z-index"> Help us with the reason</span> </div>
-            <CancelPage/>
+            <CancelPage triggerExcuse={this.props.triggerExcuse}/>
           </div>) : (this.state.shouldRenderFaq ? (<div> <div className="card_lo"> <i onClick={this.toggleFaq} className="fa fa-arrow-left"></i> <span className="faq u-position--center z-index"> FAQ</span> </div>
             {/* <div className="Content">
   </div> */}
@@ -172,7 +173,8 @@ class Landing extends Component {
                   
                   <button type="button" className="Cancel" onClick={this.renderCancel}>  Not at the moment</button>
                 </div>
-              </div> </div>  </div> </div>)))}
+              </div> </div>  </div> </div>))))}
+        { this.props.renderNegBadge ? (null) : (
         <div className={`${FooterClassName}`}>
           <Tabs defaultActiveKey="profile" className="FaqTabs" id="uncontrolled-tab-example" onSelect={this.renderFaq}>
             <Tab eventKey="faq" title="FAQ" className="Faq" >
@@ -183,13 +185,16 @@ class Landing extends Component {
           <div className="TricolorImage">
             <img className="ChennaiTricolor" src={ChennaiTricolor}></img>
           </div>
-        </div>
+        </div>)
+        }
       </div>
     );
   }
 }
 Landing.propTypes = {
   persistData: PropTypes.func,
+  triggerExcuse: PropTypes.func,
+  renderNegBadge: PropTypes.bool,
 };
 
 export default Landing;
