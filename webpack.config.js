@@ -43,5 +43,13 @@ module.exports = {
       }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig,new ExtractTextPlugin('bundle.css'),new webpack.LoaderOptionsPlugin({ options: {} }),]
+  plugins: [HtmlWebpackPluginConfig,
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+  new webpack.optimize.UglifyJsPlugin(),
+  new webpack.optimize.AggressiveMergingPlugin(),
+    new ExtractTextPlugin('bundle.css'),new webpack.LoaderOptionsPlugin({ options: {} }),]
 }
