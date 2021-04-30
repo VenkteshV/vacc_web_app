@@ -143,14 +143,14 @@ class Landing extends Component {
             </ul> </div>) : (null)} */}
         {this.state.shouldRenderPledgeForm ? (<div> <div className="card_lo">
             <i onClick={this.togglePledge} className="fa fa-arrow-left"></i>
-            <span className="faq"> The Oosi Podu Pledge</span> </div>
+            <span className="u-position--center z-index"> The Oosi Podu Pledge</span> </div>
             <PledgePage/>
           </div>) : (this.state.shouldRenderCancel ? (
           <div> <div className="card_lo">
             <i onClick={this.toggleCancel} className="fa fa-arrow-left"></i>
-            <span className="faq"> Help us with the reason</span> </div>
+            <span className="u-position--center z-index"> Help us with the reason</span> </div>
             <CancelPage/>
-          </div>) : (this.state.shouldRenderFaq ? (<div> <div className="card_lo"> <i onClick={this.toggleFaq} className="fa fa-arrow-left"></i> <span className="faq"> FAQ</span> </div>
+          </div>) : (this.state.shouldRenderFaq ? (<div> <div className="card_lo"> <i onClick={this.toggleFaq} className="fa fa-arrow-left"></i> <span className="faq u-position--center z-index"> FAQ</span> </div>
             {/* <div className="Content">
   </div> */}
             <FAQ />
@@ -159,15 +159,18 @@ class Landing extends Component {
 
             <div className="VaccineCard">
               <div className="Card">
-
                 <div className="Upload">
-                  <div><span className="Completed">{this.state.numberVaccinated.text} have signed.</span> <span className="Verbiage">Let's get to {this.state.milestoneCount.text}!</span></div>
+                  <p className="u-text--left u-margin_left u-margin_below--less text-size-14"><span className="Completed">{this.state.numberVaccinated.text} have signed.</span> <span className="Verbiage">Let's get to {this.state.milestoneCount.text}!</span></p>
 
                   <div className="ProgressIndicator">{this.renderProgress()}</div>
-                  <div><span className="Completed"> Someone signed two minutes ago </span> </div>
-                  <div><span className="Verbiage Mission"> We are on a mission to vaccinate 40 Lakh people to break the chain. If you have registered to get vaccinated, plan to register or if you have gotten your vaccination, click below to inspire others as well to get vaccinated. </span></div>
+
+                  <p className="u-text--left u-margin_above u-margin_left text-size-14"><span className="Completed u-margin_left"> Someone signed <span className="u-color-grey-10">two minutes ago</span></span> </p>
+                  
+                  <div className="u-text--left"><span className="Verbiage Mission"> We are on a mission to vaccinate 40 Lakh people to break the chain. If you have registered to get vaccinated, plan to register or if you have gotten your vaccination, click below to inspire others as well to get vaccinated. </span></div>
+                  
                   <div className="Actions">{this.renderActions()}</div>
-                  <div className="Cancel" onClick={this.renderCancel}>  Not at the moment</div>
+                  
+                  <button type="button" className="Cancel" onClick={this.renderCancel}>  Not at the moment</button>
                 </div>
               </div> </div>  </div> </div>)))}
         <div className={`${FooterClassName}`}>

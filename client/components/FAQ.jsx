@@ -20,11 +20,11 @@ export default class FAQ extends React.Component {
 <div className="FaqCard">
   <p className="PledgeQuestion">What is the Oosi Podu Pledge? </p> 
 
-   <p className = "PledgeAnswer"> While several of us are in the process or have registered to get vaccinations, there are still a lot of people who are thinking twice about getting vaccinated. By taking this simple pledge and sharing with your friends, you are helping build a conversation around getting vaccinated and encouraging more people to get vaccinated.
-   <ol><li>I will get vaccinated or I have been vaccinated.</li>
+   <p className = "PledgeAnswer "> While several of us are in the process or have registered to get vaccinations, there are still a lot of people who are thinking twice about getting vaccinated. By taking this simple pledge and sharing with your friends, you are helping build a conversation around getting vaccinated and encouraging more people to get vaccinated.</p>
+   <ol className="ordered-list u-color--black u-margin_below"><li>I will get vaccinated or I have been vaccinated.</li>
    <li> I will encourage others to get vaccinated.</li>
    <li>I will verify any information around vaccinations before sharing.</li>
-   </ol> </p>
+   </ol>
    <p className="PledgeQuestion"> We already know we need to get vaccinated, so why this pledge?  </p> 
 
 <p className = "PledgeAnswer"> While several of us are in the process or have registered to get vaccinations, there are still a lot of people who are thinking twice about getting vaccinated. By taking this simple pledge and sharing with your friends, you are helping build a conversation around getting vaccinated and encouraging more people to get vaccinated.

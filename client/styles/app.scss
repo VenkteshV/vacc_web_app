@@ -2,13 +2,22 @@ body {
   font-family: 'Baloo Thambi 2', cursive;
   font-weight: 400;
   color: $dark-gray-color;
-  letter-spacing: 0.075rem;
+  letter-spacing: rem(0.5);
 }
 
 input,
 textarea,
 button {
-  letter-spacing: 0.075rem;
+  letter-spacing: rem(0.5);
+}
+
+input {
+  height: rem(20);
+}
+
+p {
+  font-size: rem(16);
+  line-height: 1.2;
 }
 
 .VaccineCard {
@@ -24,62 +33,71 @@ button {
 }
 
 .Mission {
-  padding-top: 5rem;
-  padding-bottom: 10rem;
-  font-size: calc(24px + 3vmin) !important;
-
+  margin-top: rem(30);
+  margin-bottom: rem(30);
+  font-size: rem(16.8) !important;
+  line-height: 1.1;
+  font-weight: 100;
 }
 .QuestionBlock {
-display: inline-block;
-width:100%;
-padding-top: 10px;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  width:100%;
+  padding-top: 10px;
+
+  .fa-angle-down {
+    font-size: rem(25);
+    padding-left: rem(5);    
+  }
 }
-.faq {
-  padding-left: 28rem;
-}
+
 .fa-arrow-left {
   float: left !important;
-  font-size: 5.6rem !important;
+  font-size: 2rem !important;
   padding-left: 2px !important;
   color:white;
 }
 
-.Location {
-  width: 30rem;
-  width: 70%;
-  font-size: 5rem;
-  margin-top: 10rem;
-  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.08), 0 5px 15px 0 rgba(0,0,0,0.08);
-  box-sizing: border-box;
-  background-color: white !important;
-  margin-left: 12rem;
-}
 .css-1aya2g8 {
   background-color: white !important
 
 }
 .Cancel {
   color: deepskyblue;
-  border-radius: 25px;
-  width: 300px;
-  font-size: calc(10px + 2vmin);
-  display: inline-block;
-  align-items: center;
-  padding-top: 3rem;
-
+  border-radius: 25px;  
+  font-size: rem(16);
+  display: inline-block;  
+  margin-top: rem(30);
+  font-weight: 600;
+  background-color: initial;
+  border: initial;
 }
+
 .CancelReason {
-  color: black;
-  font-size: calc(22px + 3vmin);
-  justify-content: center;
+  color: #344356;
 }
 .panel {
   margin-bottom:3px;
+  background-color: white  !important;
+  border: none;
+  box-shadow: none;
 }
+.Footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: rem(50);
+}
+
 .FaqTabs {
   width:80%;
+  height: 100%;
   float: left;
-  background-color: yellow
+  background-color: yellow;
+  display: flex;
+  align-items: center;
 }
 
 .ChennaiTricolor {
@@ -87,9 +105,20 @@ padding-top: 10px;
   background-color: yellow;
 
 }
+.Latest {
+  text-align: left;
+  padding-left: 35px;
+}
 .TricolorImage {
+  display: flex;
+  align-items: center;
   width:20%;
+  height: 100%;
   float: right;
+  background-color: yellow;
+}
+.nav {
+  width: 100%;
 }
 .nav-tabs>li{
   width: 90%;
@@ -100,14 +129,26 @@ padding-top: 10px;
 .nav-tabs>li>a {
   color: black;
   text-align: center;
-  font-size: calc(10px + 2vmin);
-
+  font-size: rem(18);
+  padding-left: rem(20);
+  text-align: left;
 }
 .Questions {
-  font-size:2.4rem;
+  font-size: rem(16);
   font-weight: 600;
   float:left;
+  margin-right: auto;
+}
 
+.progress-bar {
+  font-size: 3rem;
+}
+
+.ProgressText {
+  text-align: left;
+}
+.Completed {
+  display: inline-block;
 }
 .Completed {
   display: inline-block;
@@ -116,107 +157,114 @@ padding-top: 10px;
 width: 100%;
 }
 .Verbiage {
-  font-size: calc(10px + 2vmin);
-color: gray;
-display: flex;
-justify-content: center;
-display: inline-block;
+  font-size: rem(14);
+  color: gray;
+  display: flex;
+  justify-content: center;
+  display: inline-block;
 }
-
-.Register {
-  background-color: deepskyblue;
-color: white;
-border-radius: 41px;
-width: 70%;
-font-size: calc(10px + 2vmin);
-
+.Footer {
+  margin-top:13rem;
 }
-
 .FooterTabs {
-  margin-top:64rem;
+  margin-top:60rem;
 }
-.ReasonText {
-  width: 70%;
-  height: 7rem;
-  font-size: 5rem;
-  margin-top: 10rem;
-  border-color: hsl(0,0%,80%);
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  outline: 0 !important;
-  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.08), 0 5px 15px 0 rgba(0,0,0,0.08);
 
-box-sizing: border-box;
-}
-.Submit,.PledgeSubmit {
-  background-color: deepskyblue;
-  color: white;
-  border-radius: 41px;
-  width: 70%;
-  font-size: calc(10px + 2vmin);
-  margin-top:28rem; 
-}
-.PledgeSubmit {
-  margin-top:4rem; 
+.Pledge {
+  text-align:left;
+padding-left:35px;
 
 }
-.PledgeButton {
-  padding-bottom: 25px;
-  padding-top: 25px;
+
+.css-1rtrksz {
+  height: 15rem;
 }
+.ReasonText,
+.css-1aya2g8,
+.css-2o5izw{
+  width: 100%;
+  height: rem(50);
+  font-size: rem(16);
+  padding-left: rem(16);
+  border: none !important;  
+  margin-bottom: rem(24);  
+  outline: 0 !important;  
+  box-shadow: 0px 0px 10px 4px rgba(60, 128, 209, 0.0851449);
+  border-radius: 8px;
+}
+
+.css-d8oujb {
+  display: none;
+}
+
 .PledgeQuestion {
-  font-size:2.4rem;
+  font-size: rem(18);
   font-weight: bold;
-  padding-top: 30px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.PledgeAnswer {
+  margin-bottom: rem(20);
+
+  & + * {
+    font-size: rem(16) !important;
+  }  
 }
 
 .card_lo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: deepskyblue;
-  padding: 42px;
+  padding: rem(0) rem(20);
+  height: rem(75);
   width: 100%;
-  display: flex;
-  align-items: flex-start;
+  display: flex;  
   justify-content: flex-start;
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
-    0 5px 15px 0 rgba(0, 0, 0, 0.08);
-  box-sizing: border-box;
+  align-items: center;
   font-size: calc(16px + 2vmin);
-  color: white
+  color: white;  
+  font-weight: 600;
+  font-size: rem(21);
 
+  & + div {
+    padding-top: rem(75);
+    padding-bottom: rem(50);
+  }
 }
 .confidence{
   padding-left: 1rem;
 }
 .Header {
-  font-weight: bold; 
-  font-size: 2.4rem;
+  font-weight: 800; 
+  font-size: rem(16);
+  margin-bottom: 10px;
 }
 .Form {
   text-align: center;
+  margin-top: rem(25);
 }
 .CancelCard {
   background-color: white;
-  padding: 32px;
+  padding: rem(20) rem(20);
   width: 100%;
   display: inline-block;
   text-align: center;
-  box-sizing: border-box;
+  overflow: auto;  
 }
 .Card {
   background-color: white;
-  padding: 32px;
+  padding: rem(30) rem(20);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
-    0 5px 15px 0 rgba(0, 0, 0, 0.08);
-  box-sizing: border-box;
 }
 .FaqCard {
   background-color: yellow !important;
-  padding: 32px;
+  padding: 20px;
   width: 100%;
   display: inline-block;
 }
@@ -224,13 +272,6 @@ box-sizing: border-box;
   font-size: 2.8rem;
   padding-left:100px;
   float:right;
-}
-
-.Answer,.PledgeAnswer {
-  font-size: 2.6rem;
-}
-.PledgeAnswer {
-  padding: 2px 2px 2px 2px;
 }
 
 .Title {
@@ -268,7 +309,6 @@ box-sizing: border-box;
 }
 .search-box-element {
   display: block;
-  box-sizing: border-box;
   width: 10%;
   height: 3rem;
   padding: 3px 6px;
@@ -287,4 +327,35 @@ font-size: 3rem
 }
 .Upload {
   width:100%;
+}
+
+.btn {
+  background-color: deepskyblue;
+  color: white;
+  border-radius: rem(100);  
+  font-size: rem(16);
+  font-weight: 700;
+  padding: rem(15) rem(20);
+  width: 100%;
+  white-space: normal;
+  border-color: initial;
+  outline: none;
+}
+
+.Register {
+  width: 90%;
+}
+
+.ordered-list {
+  list-style-type: decimal;
+  line-height: 1.5;
+  text-align: left;
+  margin-left: rem(15);
+  font-size: rem(13);
+  color: #666161;
+  font-weight: 500;
+}
+
+.panel-heading {
+  background-color: white !important;
 }

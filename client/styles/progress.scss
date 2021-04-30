@@ -15,5 +15,18 @@
 
   .progress-bar {
     width: 100%;
-    background-color: darkseagreen;
+    background-color: #64CE41;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: rem(5);
+    font-weight: 600;
+    font-size: rem(11);
+  }
+
+  .progress {
+    height: rem(12);
+    border-radius: rem(25);
+    margin: 0 rem(15);
   }
