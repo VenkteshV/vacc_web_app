@@ -144,7 +144,7 @@ class Landing extends Component {
         {this.state.shouldRenderPledgeForm ? (<div> <div className="card_lo">
             <i onClick={this.togglePledge} className="fa fa-arrow-left"></i>
             <span className="u-position--center z-index"> The Oosi Podu Pledge</span> </div>
-            <PledgePage/>
+            <PledgePage persistData ={this.props.persistData}/>
           </div>) : (this.state.shouldRenderCancel ? (
           <div> <div className="card_lo">
             <i onClick={this.toggleCancel} className="fa fa-arrow-left"></i>
@@ -189,7 +189,7 @@ class Landing extends Component {
   }
 }
 Landing.propTypes = {
-  fetchBloomVerbs: PropTypes.func,
+  persistData: PropTypes.func,
 };
 
 export default Landing;

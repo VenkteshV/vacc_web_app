@@ -13,13 +13,15 @@ export default class PledgePage extends React.Component {
             name:'',
             phone:'',
             location:'',
-            otp: ''
+            otp: '',
+            pincode: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleMobileChange = this.handleMobileChange.bind(this);
         this.handleOTPChange = this.handleOTPChange.bind(this);
         this.handleLocationChange = this.handleLocationChange.bind(this);
+        this.handlePinCodeChange = this.handlePinCodeChange.bind(this);
       }
 
       handleNameChange(event) {
@@ -32,11 +34,19 @@ export default class PledgePage extends React.Component {
         this.setState({otp:event.target.value});
     }
     handleSubmit(event) {
-        this.setState({reason:event.target.value});
+        const payload = {
+            'name':this.state.name,
+            'phone_no': this.state.phone,
+            'pin_code': this.state.pincode
+        }
+        this.props.persistData(payload);
         event.preventDefault()
     }
     handleLocationChange(event) {
         this.setState({location:event});
+    }
+    handlePinCodeChange(event) {
+        this.setState({pincode:event.target.value});
     }
     render() {
         return (
@@ -58,50 +68,36 @@ export default class PledgePage extends React.Component {
           name="name"
           placeholder="Name"
           type="text"
-          value={this.state.reason}
+          value={this.state.name}
           className="ReasonText PledgeText"
           onChange={this.handleNameChange}
           required />
-           <Select key={_.uniqueId()} className="Location"
-           placeholder="Location"
-              options={[{ "label": "Adyar", "value": "Adyar" },
-              { "label": "Alandur", "value": "Alandur" },
-              { "label": "Ambattur", "value": "Ambattur" },
-              { "label": "Anna Nagar", "value": "very difficult" },
-              { "label": "Kodambakkam", "value": "Kodambakkam" },
-              { "label": "Madhavaram", "value": "Madhavaram" },
-              { "label": "Manali", "value": "Manali" }]}
-              value={this.state.location}
-              onChange={this.handleLocationChange}
-            />
-                     <Select key={_.uniqueId()} className="Location"
-           placeholder="Age Group"
-              options={[{ "label": "Adyar", "value": "Adyar" },
-              { "label": "Alandur", "value": "Alandur" },
-              { "label": "Ambattur", "value": "Ambattur" },
-              { "label": "Anna Nagar", "value": "very difficult" },
-              { "label": "Kodambakkam", "value": "Kodambakkam" },
-              { "label": "Madhavaram", "value": "Madhavaram" },
-              { "label": "Manali", "value": "Manali" }]}
-              value={this.state.location}
-              onChange={this.handleLocationChange}
-            />
         <input
           name="phone"
-          placeholder="Mobile"
+          placeholder="Mobile (10 digits)"
+          pattern="[0-9]{10}" maxLength="10"
           type="text"
           value={this.state.phone}
           className="ReasonText PledgeText"
           onChange={this.handleMobileChange}
           required />
-                  <input
+               <input
+          name="pincode"
+          placeholder="PinCode (6 digits)"
+          pattern="[0-9]{6}" maxLength="6"
+          type="text"
+          value={this.state.pincode}
+          className="ReasonText PledgeText"
+          onChange={this.handlePinCodeChange}
+          required />
+                  {/* <input
           name="otp"
           placeholder="OTP"
           type="text"
           value={this.state.otp}
           className="ReasonText PledgeText"
           onChange={this.handleOTPChange}
-          required />
+          required /> */}
     <Button className="PledgeSubmit" type="submit">  <div className="PledgeButton">I take the Pledge</div></Button>
     </div>
   </form>
@@ -114,5 +110,5 @@ export default class PledgePage extends React.Component {
     }
 }
 PledgePage.propTypes = {
-
+persistData:PropTypes.func,
 };
