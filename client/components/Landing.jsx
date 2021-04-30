@@ -57,14 +57,20 @@ class Landing extends Component {
     ctx.drawImage(vacImg, 0, 0);
 
     ctx.textAlign = 'center';
-    const x = canvas.width / 2;
+    var x = canvas.width / 2;
     ctx.font = "16pt 'Baloo Thambi 2'";
     ctx.fillStyle = 'white';
     ctx.fillText("Thank you", x, 70);
-    ctx.fillText("for joining the drive to", x, 194);
-    ctx.fillText("flatten the curve", x, 221);
+    ctx.fillText("for joining the drive to", x, 174);
+    ctx.fillText("flatten the curve", x, 201);
     ctx.font = "bold 28pt 'Baloo Thambi 2'";
     ctx.fillText(this.props.latestUser, x, 118);
+
+    x = (canvas.width / 10) * 2;
+    ctx.textAlign = "right";
+    ctx.font = "bold 16pt 'Baloo Thambi 2'";
+    ctx.fillStyle = '#040100';
+    ctx.fillText("PoCoronaPo.in", x, 450);
 
     // ctx.fillStyle = 'blue';
     // ctx.fillRect(0,0,450,450);
