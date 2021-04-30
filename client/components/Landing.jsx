@@ -47,7 +47,12 @@ class Landing extends Component {
 
 
   shareBadge() {
-    
+    const shareData = {
+      title: 'Po Corona Po',
+      text: 'Virus verattunga Natta Kappathunga',
+      url: 'https://developer.mozilla.org',
+    }
+    navigator.share(shareData);
   }
 
 
