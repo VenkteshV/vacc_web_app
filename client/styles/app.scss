@@ -200,8 +200,9 @@ padding-left:35px;
   border: none !important;  
   margin-bottom: rem(24);  
   outline: 0 !important;  
-  box-shadow: 0px 0px 10px 4px rgba(60, 128, 209, 0.0851449);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+  padding: rem(10) rem(15);
 }
 
 .css-d8oujb {
@@ -241,7 +242,7 @@ padding-left:35px;
   font-size: rem(21);
 
   & + div {
-    padding-top: rem(75);
+    margin-top: rem(75);
     padding-bottom: rem(50);
   }
 }
@@ -362,7 +363,7 @@ font-size: 3rem
   line-height: 1.5;
   text-align: left;
   margin-left: rem(15);
-  font-size: rem(13);
+  font-size: rem(14);
   color: #666161;
   font-weight: 500;
 }
