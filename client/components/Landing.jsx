@@ -59,7 +59,8 @@ class Landing extends Component {
     ctx.font = '50px serif';
     ctx.fillText('Share', 50, 90);
     canvas.toBlob(function(blob) {
-        var fileArray = [blob];
+      var badgefile = new File([blob], "badge.jpg", {type: 'image/jpeg'});
+      var fileArray = [badgefile];
         console.log(blob);
         const shareData = {
           files: fileArray,
