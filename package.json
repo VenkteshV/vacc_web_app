@@ -1,5 +1,5 @@
 {
-  "name": "vaccine.Web",
+  "name": "vaccineWeb",
   "version": "1.0.0",
   "description": "Chennai vaccination challenge",
   "main": "index.js",
