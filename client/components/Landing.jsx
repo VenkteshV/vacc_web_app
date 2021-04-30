@@ -49,17 +49,20 @@ class Landing extends Component {
   shareBadge() {
 
     let canvas = document.createElement('canvas');
-    canvas.height = 450;
-    canvas.width  = 450;
+    canvas.height = 640;
+    canvas.width  = 360;
     var ctx = canvas.getContext('2d');
-    
-    ctx.fillStyle = 'blue';
-    ctx.fillRect(0,0,450,450);
-    ctx.fillStyle = 'white';
-    ctx.font = '50px serif';
-    ctx.fillText('Share', 50, 90);
+
+    var vacImg = document.getElementsByClassName("VaccineImg")[0];
+    ctx.drawImage(img, 0, 0);
+
+    // ctx.fillStyle = 'blue';
+    // ctx.fillRect(0,0,450,450);
+    // ctx.fillStyle = 'white';
+    // ctx.font = '50px serif';
+    // ctx.fillText('Share', 50, 90);
     canvas.toBlob(function(blob) {
-      var badgefile = new File([blob], "badge.jpg", {type: 'image/jpeg'});
+      var badgefile = new File([blob], "badge.png", {type: 'image/png'});
       var fileArray = [badgefile];
         console.log(blob);
         const shareData = {
