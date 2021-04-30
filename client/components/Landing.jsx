@@ -47,14 +47,32 @@ class Landing extends Component {
 
 
   shareBadge() {
-    const fileArray = [VisitAgainImg];
-    const shareData = {
-      files: fileArray,
-      title: 'Po Corona Po',
-      text: 'Virus Verattunga Natta Kappathunga',
-      url: 'https://pocoronapo.in',
-    }
-    navigator.share(shareData);
+
+    let canvas = document.createElement('canvas');
+    canvas.height = 450;
+    canvas.width  = 450;
+    var ctx = can.getContext('2d');
+    
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(0,0,450,450);
+    ctx.fillStyle = 'white';
+    ctx.font = '50px serif';
+    ctx.fillText('Share', 50, 90);
+    canvas.toBlob(function(blob) {
+        var fileArray = [blob];
+        console.log(blob);
+        const shareData = {
+          files: fileArray,
+          title: 'Po Corona Po',
+          text: 'Virus Verattunga Natta Kappathunga',
+          url: 'https://pocoronapo.in',
+        };
+        navigator.share(shareData);
+    });
+
+
+    
+    
   }
 
 
