@@ -67,7 +67,7 @@ class Landing extends Component {
     ctx.fillText(this.props.latestUser, x, 118);
 
     x = (canvas.width / 10) * 2;
-    ctx.textAlign = "right";
+    ctx.textAlign = "left";
     ctx.font = "bold 16pt 'Baloo Thambi 2'";
     ctx.fillStyle = '#040100';
     ctx.fillText("PoCoronaPo.in", x, 450);
