@@ -49,7 +49,7 @@ export default class FAQ extends React.Component {
 <li>Divya Sharma, Chennai Tricolor Initiative </li>
 <li>Venktesh, Tech For Cities</li>
 <li>Kumaresh Chinnaswamy, Tech For Cities </li>
-<li>Siddharth, Tech For Cities </li>
+<li>Siddharth NA, Tech For Cities </li>
 <li>David, Tech For Cities </li>
 <li>Ashok, Tech For Cities </li>
 <li>Ratheesh, SPI Edge Team </li>
