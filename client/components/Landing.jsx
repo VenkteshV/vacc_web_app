@@ -161,10 +161,10 @@ class Landing extends Component {
               <div className="Card">
 
                 <div className="Upload">
-                  <div><span className="Completed">{this.state.numberVaccinated.text} have signed.</span> <span className="Verbiage">Let's get to {this.state.milestoneCount.text}!</span></div>
+                  <div className="ProgressText"><span className="Completed">{this.state.numberVaccinated.text} have signed.</span> <span className="Verbiage">Let's get to {this.state.milestoneCount.text}!</span></div>
 
                   <div className="ProgressIndicator">{this.renderProgress()}</div>
-                  <div><span className="Completed"> Someone signed two minutes ago </span> </div>
+                  <div className="Latest"><span className="Completed"> Someone signed two minutes ago </span> </div>
                   <div><span className="Verbiage Mission"> We are on a mission to vaccinate 40 Lakh people to break the chain. If you have registered to get vaccinated, plan to register or if you have gotten your vaccination, click below to inspire others as well to get vaccinated. </span></div>
                   <div className="Actions">{this.renderActions()}</div>
                   <div className="Cancel" onClick={this.renderCancel}>  Not at the moment</div>
