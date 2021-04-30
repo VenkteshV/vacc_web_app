@@ -5,7 +5,8 @@ const bodyParser = require('body-parser');
 
 const api_route = require('./routes/recommend');
 
-const form_submit_route = require('./routes/formsubmit');
+const submit_pledge_route = require('./routes/submitpledge');
+const submit_excuse_route = require('./routes/submitexcuse');
 const get_progress_route = require('./routes/getprogress');
 const send_otp_route = require('./routes/sendotp');
 const verify_otp_route = require('./routes/verifyotp');
@@ -26,7 +27,9 @@ app.listen(port, function () {
 });
 
 
-app.use(form_submit_route);
+app.use(submit_pledge_route);
+
+app.use(submit_excuse_route);
 
 app.use(get_progress_route);
 

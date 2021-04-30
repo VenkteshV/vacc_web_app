@@ -9,43 +9,40 @@ const pool = new Pool({
 
 /*
 
-age groups 
-0 - 0-17
-1 - 18-24
-2 - 25-34
-3 - 35-44
-4 - Above 45
+// age groups 
+// 0 - 0-17
+// 1 - 18-24
+// 2 - 25-34
+// 3 - 35-44
+// 4 - Above 45
 
-create table age_groups(
-    id int primary key not null,
-    val_text varchar(10) not null
-);
+// create table age_groups(
+//     id int primary key not null,
+//     val_text varchar(10) not null
+// );
 
-insert into age_groups (id, val_text)
-values (0, '0-17'),
-    (1, '18-24'),
-    (2, '25-34'),
-    (3, '35-44'),
-    (4, 'Above 45');
+// insert into age_groups (id, val_text)
+// values (0, '0-17'),
+//     (1, '18-24'),
+//     (2, '25-34'),
+//     (3, '35-44'),
+//     (4, 'Above 45');
 
 
 CREATE TABLE pledgers(
     reg_no SERIAL,
     reg_time TIMESTAMP not null,
     name varchar(120)  not null,
-    age_group int,
-    phone_no char(10) UNIQUE,
-    PRIMARY KEY(reg_no),
-    CONSTRAINT fk_age_groups
-        FOREIGN KEY(age_group)
-            REFERENCES age_groups(id)
+    pin_code char(6) not null,
+    phone_no char(10) UNIQUE not null,
+    PRIMARY KEY(reg_no)
 );
 
 
-create table excuse(
-    excuse_id int primary key not null,
-    excuse_text char(128)
-)
+CREATE TABLE excuses(
+    excuse_id SERIAL,
+    excuse_text VARCHAR(500)
+);
 
 */
 module.exports.getRegisterCount = async function () {
@@ -98,16 +95,54 @@ module.exports.getRecentRegisterPeople = async function() {
     }
 }
 
-module.exports.putRegister = function () {
+module.exports.putRegister = async function (name, phone_no, pin_code) {
     /*
     INSERT INTO pledgers (reg_time, name, age_group, phone_no)
     VALUES (current_timestamp, 'john wick', 3, 9999999999);
     */
-   
+
     // form submit action into db
     console.log("insert register into db");
+    try {
+        const theQuery = "INSERT INTO pledgers (reg_time, name, phone_no, pin_code) \
+            VALUES(current_timestamp, $1, $2, $3)";
+        const theValues = [name, phone_no, pin_code];
+        const res = await pool.query(theQuery, theValues);
+        
+        return {
+            "result": true,
+            "msg" : "pledge successfully submitted"
+        };
+    } catch (error) {
+        return {
+            "result": false,
+            "msg" : "pledge submit failed"
+        };
+    }
 }
 
-module.exports.putExcuse = function() {
-    console.log("insert excuse into db");
+module.exports.putExcuse = async function(excuse) {
+    /*
+    INSERT INTO excuses (excuse_text)
+    VALUES ('a very long excuse');
+    */
+   console.log("insert excuse into db");
+   try {
+       //todo validate excuse text, 
+       // - istext, is not null
+       const res = await pool.query('INSERT INTO excuses (excuse_text) VALUES($1)', [excuse]);
+
+        return {
+            "result": true,
+            "msg" : "excuse successfully submitted"
+        };
+
+   } catch (error) {
+       console.log(error);
+    return {
+        "result": false,
+        "msg" : "excuse submit failed"
+    };
+       
+   }
 }
