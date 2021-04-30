@@ -6,7 +6,8 @@ const mapStateToProps = (state) => ({
   config: state.config,
   renderBadge: state.pledge.renderBadge || false,
   renderNegBadge : state.pledge.renderNegBadge ||false,
-  selectedValues: state.config.selectedValues
+  selectedValues: state.config.selectedValues,
+  progressData: state.config.progressData
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({

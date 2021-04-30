@@ -9,6 +9,7 @@ export default function* watchStartApplication() {
 
 export function* connect() {
   const response =   [];
-  yield put( { type: actions.CONFIG_LOADED, config: response, selectedValues: [] } );
+  const progressData = yield call(callGet, "/getprogress");
+  yield put( { type: actions.CONFIG_LOADED, progressData, config: response, selectedValues: [] } );
 
 }

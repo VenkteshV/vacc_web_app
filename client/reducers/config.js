@@ -8,6 +8,7 @@ const config = (state = {}, action) => {
       searchText: action.searchText || '',
       searchResult: action.searchResult || [],
       selectedValues: action.selectedValues || [],
+      progressData : action.progressData || {}
     });
   default:
     return state;
