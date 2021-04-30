@@ -51,7 +51,7 @@ class Landing extends Component {
     let canvas = document.createElement('canvas');
     canvas.height = 450;
     canvas.width  = 450;
-    var ctx = can.getContext('2d');
+    var ctx = canvas.getContext('2d');
     
     ctx.fillStyle = 'blue';
     ctx.fillRect(0,0,450,450);
