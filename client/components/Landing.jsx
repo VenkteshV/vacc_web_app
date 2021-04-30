@@ -48,7 +48,6 @@ class Landing extends Component {
 
   shareBadge() {
     const fileArray = [VisitAgainImg];
-    fileArray.freeze();
     const shareData = {
       files: fileArray,
       title: 'Po Corona Po',
