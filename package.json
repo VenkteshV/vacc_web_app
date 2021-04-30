@@ -10,7 +10,7 @@
     "build-dev": "webpack -d --config webpack.config.js --progress --colors --watch && webpack-dev-server",
     "start": "node server/server.js",
     "server": "node server/server.js",
-    "build": "webpack -d --config webpack.config.js"
+    "build": "webpack --config webpack.config.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
