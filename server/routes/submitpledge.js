@@ -15,7 +15,10 @@ router.post("/submitpledge", formLimiter, async function (req,res) {
             "msg": msg
         });
     } catch (error) {
-        
+        res.json({
+            "success" : false,
+            "msg": "failure during submit pledge"
+        });
     }
 
 
