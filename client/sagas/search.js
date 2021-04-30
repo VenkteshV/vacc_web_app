@@ -5,14 +5,15 @@ import {config, selectedValues} from './selectors';
 import _ from 'lodash';
 import { delay } from 'redux-saga';
 export default function* watchSearchConditionRequest() {
-  let searchAction;
-  while ((searchAction = yield take(actions.SEARCH_CONDITION_TRIGGER)) !== null) {
-    yield fork(searchConditions, searchAction);
+  let pledgeAction;
+  while ((pledgeAction = yield take(actions.SUBMIT_TRIGGER)) !== null) {
+    yield fork(submitPledge, pledgeAction);
   }
 }
 
-
-
-export  function* watchRunExperimentsRequest() {
+export function* submitPledge(pledgeAction) {
+  console.log("pledgeAction",pledgeAction.payload.payload);
 
 }
+
+
