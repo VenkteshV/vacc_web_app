@@ -53,7 +53,7 @@ class Landing extends Component {
     canvas.width  = 360;
     var ctx = canvas.getContext('2d');
 
-    var vacImg = document.getElementsByClassName("VaccineImg")[0];
+    var vacImg = document.getElementsById("badgeImage1")[0];
     ctx.drawImage(vacImg, 0, 0);
 
     ctx.textAlign = 'right';
@@ -205,7 +205,7 @@ class Landing extends Component {
                 </li>
               ))}
             </ul> </div>) : (null)} */}
-        {this.props.renderBadge ? (<div><img className="VaccineImgCover" src={VisitAgainImg}></img>
+        {this.props.renderBadge ? (<div><img id="badgeImage1" className="VaccineImgCover" src={VisitAgainImg}></img>
           <div class="BadgeContent u-text--right">
             <p className="BadgeText"> Thank you <br /> <span className="BadgeUser">{this.props.latestUser} <br />  </span></p>
             <p className="BadgeConclusion">#PoCoronaPo<br /> #MaskPodu<br /> #OosiPodu<br /> #ThalliNillu<br /></p>
