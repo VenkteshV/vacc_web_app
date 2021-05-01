@@ -61,7 +61,7 @@ class Landing extends Component {
     ctx.font = "16pt 'Baloo Thambi 2'";
     ctx.fillStyle = 'white';
     ctx.fillText("Thank you", x, 70);
-    ctx.fillText("#MaskPodu", x, 149);
+    ctx.fillText("#PoCoronaPo", x, 149);
     ctx.fillText("#MaskPodu", x, 175);
     ctx.fillText("#OosiPodu", x, 202);
     ctx.fillText("#ThalliNillu", x, 227);
