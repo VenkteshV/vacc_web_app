@@ -190,7 +190,7 @@ class Landing extends Component {
     const FooterClassName = this.state.shouldRenderCancel ? 'FooterTabs': 'Footer';
     console.log("renderfaq", this.props.renderBadge);
     return (
-      <div className="BadgeWrapper">
+      <div>
 
 
 
@@ -205,13 +205,13 @@ class Landing extends Component {
                 </li>
               ))}
             </ul> </div>) : (null)} */}
-        {this.props.renderBadge ? (<div><img id="badgeImage1" className="VaccineImgCover" src={VisitAgainImg}></img>
-          <div class="BadgeContent u-text--right">
+        {this.props.renderBadge ? (<div className="BadgeWrapper"><img id="badgeImage1" className="VaccineImgCover" src={VisitAgainImg}></img>
+          <div className="BadgeContent u-text--right">
             <p className="BadgeText"> Thank you <br /> <span className="BadgeUser">{this.props.latestUser} <br />  </span></p>
             <p className="BadgeConclusion">#PoCoronaPo<br /> #MaskPodu<br /> #OosiPodu<br /> #ThalliNillu<br /></p>
           </div>
 
-          <div class="BadgeContent">  
+          <div className="BadgeContent">  
             <p className="Badgebottom">Oosi Podu pledge <br/></p> 
             <p className="BadgeMiddle">Virus a verattunga. Natta Kappathunga.<br/> </p> 
             <p className="BadgeBottomConclusion">Visit oosipodu.in</p>
