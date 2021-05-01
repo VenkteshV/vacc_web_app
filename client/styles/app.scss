@@ -253,15 +253,14 @@ padding-left:35px;
 }
 
 .BadgeWrapper {
+  padding: 0 rem(20);
   display: flex;
-  flex-direction: column;
-  flex: 1;
+  flex-direction: column;  
+  min-height: 100vh;
 }
  
 .BadgeContent {
-  padding: rem(40) rem(30);
-  display: flex;
-  flex-direction: column;
+  padding-top: 40px;
   flex: 1;
 
   & + & {
@@ -468,6 +467,7 @@ font-size: 3rem
 .Share {
   background-color:#D93141 !important;
   margin-top: 22px;
+  margin-bottom: 20px;
   border: 0;
 }
 
