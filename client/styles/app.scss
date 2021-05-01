@@ -518,7 +518,7 @@ font-size: 3rem
   border-radius: 8px;
   padding: rem(10) rem(15);
 }
-.LangToggle {
+.LangToggle, .LangTamil {
 left: 235px;
 right: 73px;
 top: 39px;
@@ -528,6 +528,10 @@ font-size: 1rem;
 border: 1px solid #FDF316;
 box-sizing: border-box;
 border-radius: 5px;
+}
+
+.LangTamil {
+width:62%
 }
 
 .English {

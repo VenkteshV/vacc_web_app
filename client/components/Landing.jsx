@@ -201,6 +201,7 @@ class Landing extends Component {
   render() {
     const tamilClass = this.state.tamil ? 'TamilChecked':'Tamil';
     const englishClass = !this.state.tamil ? 'English':'EnglishUnchecked';
+    const langToggle = this.state.tamil ? 'LangTamil':'LangToggle';
 
     const now_date = new Date();
     let time_diff1 = now_date - (new Date(this.props.config.progressData.response.recents[0].timestamp));
@@ -265,7 +266,7 @@ class Landing extends Component {
             {/* <div className="Content">
   </div> */}
             <About />
-          </div>) : (<div> <div className="card_lo"> {this.state.tamil ? translations.header.tamil:translations.header.english}  <div className="LangToggle" onClick={this.handleLangToggle}> <span className={tamilClass}>தமிழ்</span> <span className={englishClass}>English</span> </div></div>  <div>
+          </div>) : (<div> <div className="card_lo"> {this.state.tamil ? translations.header.tamil:translations.header.english}  <div className={langToggle} onClick={this.handleLangToggle}> <span className={tamilClass}>தமிழ்</span> <span className={englishClass}>English</span> </div></div>  <div>
             <img className="VaccineImg" src={VaccineImg} />
 
             <div className="VaccineCard">
