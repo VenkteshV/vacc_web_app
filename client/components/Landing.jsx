@@ -57,7 +57,7 @@ class Landing extends Component {
     ctx.drawImage(vacImg, 0, 0);
 
     ctx.textAlign = 'right';
-    var x = canvas.width - ((canvas.width / 10) * 2);
+    var x = canvas.width - ((canvas.width / 10) * 1);
     ctx.font = "16pt 'Baloo Thambi 2'";
     ctx.fillStyle = 'white';
     ctx.fillText("Thank you", x, 70);
@@ -68,7 +68,7 @@ class Landing extends Component {
     ctx.font = "bold 28pt 'Baloo Thambi 2'";
     ctx.fillText(this.props.latestUser, x, 118);
 
-    x = (canvas.width / 10) * 2;
+    x = (canvas.width / 10) * 1;
     ctx.textAlign = "left";
     ctx.font = "16pt 'Baloo Thambi 2'";
     ctx.fillStyle = '#040100';
