@@ -204,7 +204,7 @@ class Landing extends Component {
         {this.props.renderBadge ? (<div><img className="VaccineImgCover" src={VisitAgainImg}></img>
           <div class="BadgeContent u-text--right">
             <p className="BadgeText"> Thank you <br /> <span className="BadgeUser">{this.props.latestUser} <br />  </span></p>
-            <p className="BadgeConclusion">for joining the drive to <br /> flatten the curve.</p>
+            <p className="BadgeConclusion">#PoCoronaPo<br /> #MaskPodu<br /> #OosiPodu<br /> #ThalliNillu<br /></p>
           </div>
 
           <div class="BadgeContent">  
