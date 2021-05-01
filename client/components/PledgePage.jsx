@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import FcContainer from '../containers/FcContainer.jsx'
 import * as faqs from '../constants/faqs';
-import {FieldGroup,FormGroup,FormControl,ControlLabel, Button} from 'react-bootstrap';
+import {FieldGroup,FormGroup,FormControl,Checkbox, Button} from 'react-bootstrap';
 import Select from'react-select';
 import _ from 'lodash';
 export default class PledgePage extends React.Component {
@@ -39,6 +39,7 @@ export default class PledgePage extends React.Component {
         const payload = {
             'name':this.state.name,
             'phone_no': this.state.phone,
+            "do_help" : this.state.dohelp,
             'pin_code': this.state.pincode
         }
         this.props.persistData(payload);
@@ -51,11 +52,11 @@ export default class PledgePage extends React.Component {
         this.setState({pincode:event.target.value});
     }
     handleDoHelpChange(event) {
-        console.log("onchange do help", event.target.checked);
         this.setState({dohelp:event.target.checked});
 
     }
     render() {
+        const checkBoxClass = this.state.dohelp ? 'checkbox-blue': 'checkbox'
         return (
             <div>
                 <div className="CancelCard">
@@ -107,14 +108,15 @@ export default class PledgePage extends React.Component {
             <label className="checkboxContainer" for="dohelp">
             I would like to volunteer
                 <input
-                    id="dohelp"
+                   id="flexCheckChecked"
                     name="dohelp"
                     type="checkbox"
-                    value={this.state.dohelp}
+                    checked={this.state.dohelp}
                     onChange={this.handleDoHelpChange}
                 />
-               <span className="checkbox"></span>
+               <span className={checkBoxClass}></span>
             </label>
+  
                   {/* <input
           name="otp"
           placeholder="OTP"

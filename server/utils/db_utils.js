@@ -16,6 +16,7 @@ CREATE TABLE pledgers(
     reg_time TIMESTAMP not null,
     name varchar(120)  not null,
     pin_code char(6) not null,
+    do_help boolean,
     phone_no char(10) UNIQUE not null,
     PRIMARY KEY(reg_no)
 );
@@ -87,7 +88,7 @@ module.exports.putRegister = async function (name, phone_no, pin_code, do_help) 
         const theQuery = "INSERT INTO pledgers (reg_time, name, phone_no, pin_code, do_help) \
             VALUES(current_timestamp, $1, $2, $3, $4)";
         const theValues = [name, phone_no, pin_code, do_help];
-        // const res = await pool.query(theQuery, theValues);
+        const res = await pool.query(theQuery, theValues);
         
         return {
             "result": true,
