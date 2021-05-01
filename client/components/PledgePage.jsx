@@ -14,7 +14,8 @@ export default class PledgePage extends React.Component {
             phone:'',
             location:'',
             otp: '',
-            pincode: ''
+            pincode: '',
+            dohelp: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
@@ -22,6 +23,7 @@ export default class PledgePage extends React.Component {
         this.handleOTPChange = this.handleOTPChange.bind(this);
         this.handleLocationChange = this.handleLocationChange.bind(this);
         this.handlePinCodeChange = this.handlePinCodeChange.bind(this);
+        this.handleDoHelpChange = this.handleDoHelpChange.bind(this);
       }
 
       handleNameChange(event) {
@@ -47,6 +49,11 @@ export default class PledgePage extends React.Component {
     }
     handlePinCodeChange(event) {
         this.setState({pincode:event.target.value});
+    }
+    handleDoHelpChange(event) {
+        console.log("onchange do help", event.target.checked);
+        this.setState({dohelp:event.target.checked});
+
     }
     render() {
         return (
@@ -93,6 +100,21 @@ export default class PledgePage extends React.Component {
           className="ReasonText PledgeText"
           onChange={this.handlePinCodeChange}
           required />
+          {/* <label class="container">Two
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>*/}
+            <label className="checkboxContainer" for="dohelp">
+            I would like to volunteer
+                <input
+                    id="dohelp"
+                    name="dohelp"
+                    type="checkbox"
+                    value={this.state.dohelp}
+                    onChange={this.handleDoHelpChange}
+                />
+               <span className="checkbox"></span>
+            </label>
                   {/* <input
           name="otp"
           placeholder="OTP"
