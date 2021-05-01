@@ -53,7 +53,7 @@ class Landing extends Component {
     canvas.width  = 360;
     var ctx = canvas.getContext('2d');
 
-    var vacImg = document.getElementById("badgeImage1")[0];
+    var vacImg = document.getElementById("badgeImage1");
     ctx.drawImage(vacImg, 0, 0);
 
     ctx.textAlign = 'right';
