@@ -56,21 +56,25 @@ class Landing extends Component {
     var vacImg = document.getElementsByClassName("VaccineImg")[0];
     ctx.drawImage(vacImg, 0, 0);
 
-    ctx.textAlign = 'center';
-    var x = canvas.width / 2;
+    ctx.textAlign = 'right';
+    var x = canvas.width - ((canvas.width / 10) * 2);
     ctx.font = "16pt 'Baloo Thambi 2'";
     ctx.fillStyle = 'white';
     ctx.fillText("Thank you", x, 70);
-    ctx.fillText("for joining the drive to", x, 174);
-    ctx.fillText("flatten the curve", x, 201);
+    ctx.fillText("#MaskPodu", x, 149);
+    ctx.fillText("#MaskPodu", x, 175);
+    ctx.fillText("#OosiPodu", x, 202);
+    ctx.fillText("#ThalliNillu", x, 227);
     ctx.font = "bold 28pt 'Baloo Thambi 2'";
     ctx.fillText(this.props.latestUser, x, 118);
 
     x = (canvas.width / 10) * 2;
     ctx.textAlign = "left";
-    ctx.font = "bold 16pt 'Baloo Thambi 2'";
+    ctx.font = "16pt 'Baloo Thambi 2'";
     ctx.fillStyle = '#040100';
-    ctx.fillText("PoCoronaPo.in", x, 450);
+    ctx.fillText("Virus Verattunga Natta Kappathunga", x, 450);
+    ctx.font = "bold 18pt 'Baloo Thambi 2'";
+    ctx.fillText("PoCoronaPo.in", x, 500);
 
     // ctx.fillStyle = 'blue';
     // ctx.fillRect(0,0,450,450);
