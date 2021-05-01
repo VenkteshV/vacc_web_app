@@ -212,9 +212,9 @@ class Landing extends Component {
           </div>
 
           <div className="BadgeContent">  
-            <p className="Badgebottom">Oosi Podu pledge <br/></p> 
+            <p className="Badgebottom">Po Corona Po <br/></p> 
             <p className="BadgeMiddle">Virus a verattunga. Natta Kappathunga.<br/> </p> 
-            <p className="BadgeBottomConclusion">Visit oosipodu.in</p>
+            <p className="BadgeBottomConclusion">Visit PoCoronaPo.in</p>
           </div>  
           <Button
         className="Share"
