@@ -26,6 +26,8 @@ CREATE TABLE excuses(
     excuse_text VARCHAR(500)
 );
 
+ALTER TABLE pledgers
+ADD COLUMN do_help BOOLEAN;
 */
 module.exports.getRegisterCount = async function () {
     try {
@@ -77,19 +79,15 @@ module.exports.getRecentRegisterPeople = async function() {
     }
 }
 
-module.exports.putRegister = async function (name, phone_no, pin_code) {
-    /*
-    INSERT INTO pledgers (reg_time, name, age_group, phone_no)
-    VALUES (current_timestamp, 'john wick', 3, 9999999999);
-    */
+module.exports.putRegister = async function (name, phone_no, pin_code, do_help) {
 
     // form submit action into db
     console.log("insert register into db");
     try {
-        const theQuery = "INSERT INTO pledgers (reg_time, name, phone_no, pin_code) \
-            VALUES(current_timestamp, $1, $2, $3)";
-        const theValues = [name, phone_no, pin_code];
-        const res = await pool.query(theQuery, theValues);
+        const theQuery = "INSERT INTO pledgers (reg_time, name, phone_no, pin_code, do_help) \
+            VALUES(current_timestamp, $1, $2, $3, $4)";
+        const theValues = [name, phone_no, pin_code, do_help];
+        // const res = await pool.query(theQuery, theValues);
         
         return {
             "result": true,
