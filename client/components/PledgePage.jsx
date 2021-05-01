@@ -59,18 +59,17 @@ export default class PledgePage extends React.Component {
         return (
             <div>
                 <div className="CancelCard">
-               <div>
-                   <span className="CancelReason"> 
-                        <ol className="ordered-list">
+                    <div className="CancelCardBg">            
+                        <ol className="ordered-list u-margin_below">
                             <li>Masku Podu. Oosi Podu.</li>
-                            <li>Unverified Messages Forward Pannadhe.</li>
+                            <li>Unverified Msgs Forward Pannadhe.</li>
                             <li>Konjam Thalli Nillu.</li>
                         </ol>
-                       <span className="Comment">Idha Ellam Therunjavannukum.  <br/>
+                        
+                        <p className="Comment">Idha Ellam Therunjavannukum.  <br/>
                         Theriyadha Vannukum Sollu.
-                        </span> 
-                    </span>
-                </div>
+                        </p> 
+                    </div>                
                 <div className = "Form">
                 <form  onSubmit={this.handleSubmit}>
         <div>

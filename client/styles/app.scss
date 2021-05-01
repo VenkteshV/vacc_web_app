@@ -6,6 +6,7 @@ body {
   max-width: 480px;
   margin: auto;
   position: relative;
+  background-color: #F8F8F8;
 }
 
 .flex-container {
@@ -105,14 +106,14 @@ p {
   width:80%;
   height: 100%;
   float: left;
-  background-color: #FEEF05;
+  background-color: white;
   display: flex;
   align-items: center;
 }
 
 .ChennaiTricolor {
   width: 90%;
-  background-color: #FEEF05;;
+  background-color: white;;
 
 }
 .Latest {
@@ -125,7 +126,7 @@ p {
   width:20%;
   height: 100%;
   float: right;
-  background-color: #FEEF05;
+  background-color: white;
 }
 .nav {
   width: 100%;
@@ -133,7 +134,7 @@ p {
 .nav-tabs>li{
   width: 90%;
   text-align: center;
-  background-color: #FEEF05;
+  background-color: white;
 }
 
 .nav-tabs>li>a {
@@ -228,7 +229,7 @@ padding-left:35px;
   list-style-type: decimal;
   line-height: 1.5;
   text-align: left;
-  font-size: .8125rem;
+  font-size: rem(16);
   color: #666161;
   font-weight: 500;
 }
@@ -253,14 +254,13 @@ padding-left:35px;
 }
 
 .BadgeWrapper {
-  padding: 0 rem(20);
+  padding: rem(40) rem(20);
   display: flex;
   flex-direction: column;  
   min-height: 100vh;
 }
  
-.BadgeContent {
-  padding-top: 40px;
+.BadgeContent {  
   flex: 1;
 
   & + & {
@@ -356,15 +356,22 @@ color: #1D1D1D;
   margin-top: rem(25);
 }
 .CancelCard {
-  background-color: white;
+  background-color: #F8F8F8;
   padding: rem(20) rem(20);
   width: 100%;
   display: inline-block;
   text-align: left;
   overflow: auto;  
 }
+
+.CancelCardBg {
+  padding: rem(20);
+  background-color: #FEEF05;
+  border-radius: 8px;
+}
+
 .Card {
-  background-color: white;
+  background-color: #F8F8F8;
   padding: rem(30) rem(20);
   width: 100%;
   display: flex;
@@ -444,7 +451,7 @@ font-size: 3rem
 }
 
 #uncontrolled-tab-example-tab-faq {
-  background-color: #FEEF05;
+  background-color: white;
 }
 
 .btn {
@@ -466,8 +473,7 @@ font-size: 3rem
 
 .Share {
   background-color:#D93141 !important;
-  margin-top: 22px;
-  margin-bottom: 20px;
+  margin-top: 22px;  
   border: 0;
 }
 
@@ -476,7 +482,7 @@ font-size: 3rem
   line-height: 1.5;
   text-align: left;
   margin-left: rem(15);
-  font-size: rem(14);
+  font-size: rem(16);
   color: #666161;
   font-weight: 500;
 }
@@ -490,58 +496,4 @@ font-size: 3rem
 }
 .panel-heading {
   background-color: white !important;
-}
-
-
-.checkboxContainer {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: none;
-
-  width: 100%;
-  height: rem(50);
-  font-size: rem(16);
-  padding-left: rem(16);
-  margin-bottom: rem(24);  
-  outline: 0 !important;    
-  border-radius: 8px;
-  padding: rem(10) rem(15);
-}
-
-.checkboxContainer input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.checkbox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
-
-.checkboxContainer input:checked ~ .checkbox:after {
-  display: block;
-}
-
-.checkboxContainer .checkbox:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
 }

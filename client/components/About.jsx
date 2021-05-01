@@ -18,72 +18,43 @@ export default class FAQ extends React.Component {
     return (
 <div>
 <div className="FaqCard">
+  <p className="PledgeQuestion">About Us</p>
+  <p className = "PledgeAnswer ">Chennai COVID Volunteer Taskforce</p>
+  <p className = "PledgeAnswer ">Coordinated by Chennai Tricolor Initiative</p>
+  <p className = "PledgeAnswer ">We are coordinating across various NGOs, government officials, and citizens to help fight the biggest crisis we have faced since Indian Independence. We have 9 tasks forces and 200+ volunteers working across various initiatives. <a href="https://www.chennaitricolor.in/covid">Click here to learn more.</a></p>
+
   <p className="PledgeQuestion">Why PoCoronaPo? </p> 
 
-   <p className = "PledgeAnswer "> Namma Natta Namma Dhaan Kapathanam. PoCoronaPo is a simple promise that all of us take to fight against corona. </p>
-   <ol className="ordered-list u-color--black u-margin_below">
-   <li> Masku Podu. Oosi Podu.</li>
-   <li>Unverified Messages Forward Pannadhe. </li>
-   <li>Konjam Thalli Nillu</li>
-   </ol>
-   <p className = "PledgeAnswer ">Idha Ellam Therunjavannukum. Theriyadha Vannukum Sollu.  </p>
-    <p className="PledgeQuestion">Virus a verattunga. Natta Kappathunga.</p>
+  <p className = "PledgeAnswer ">Namma Natta Namma Dhaan Kapathanam. PoCoronaPo is a simple promise that all of us take to fight against corona. And it is a call for volunteers who can become part of the Chennai Volunteer Taskforce as the situation evolves.</p>
+  <p className = "PledgeAnswer ">Virus a verattunga. Natta Kappathunga.</p>
 
    <p className="PledgeQuestion">Contributors </p>
-   <p className="PledgeAnswer">We are coordinating across various NGOs, government officials, and citizens to help fight the biggest crisis we have faced since Indian Independence.</p>
-
-    <p className="PledgeQuestion Volunteers">200+ volunteers.</p>
-    <p className="PledgeQuestion Volunteers"> 9 Volunteer Taskforces</p>
-
-    <p className="TaskForce">Chennai COVID Volunteer Taskforce </p>
-    <p className="TaskForce">COVID19 Help - Chennai</p>
-
-    <ul className="unordered-list">
-    <li>Vijay Anand, Chennai Tricolor Initiative</li>
-<li>Vikram Ravi, Chennai Tricolor Initiative</li>
-<li>Renuka Jaypal, Chennai Tricolor Initiative</li>
-<li>Fazil Badrudeen, Chennai Tricolor Initiative</li>
-<li>Mahadevan Jayaram, Chennai Tricolor Initiative </li>
-<li>Siddharth, Chennai Tricolor Initiative </li>
-<li>Ravi Kumar, Chennai Tricolor Initiative </li>
-<li>Divya Sharma, Chennai Tricolor Initiative </li>
-<li>Venktesh, Tech For Cities</li>
-<li>Kumaresh Chinnaswamy, Tech For Cities </li>
-<li>Siddharth NA, Tech For Cities </li>
-<li>David, Tech For Cities </li>
-<li>Ashok, Tech For Cities </li>
-<li>Ratheesh, SPI Edge Team </li>
-<li>Sakthivel Pannerselvam, the6.in </li>
-<li>Amar Ramesh, Studio A </li>
-<li>Deepak, Prayogshala</li>
-<li>Sachin Narula, Falcon.io </li>
-<li>Ramki, Thoughtworks </li>
-<li>Saradha Ramani, Rotary</li>
-<li>Wilfred Davidar, IAS Retd </li>
-
-<li>Shravan Shankar, AtWorks (The Binary Workshop) </li>
-<li>Murshitha Sheeren </li>
-<li>Harshini </li>
-<li>Jayalakshmi Krishnan</li>
-<li>Petsfamilia</li>
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
+    <ul className="unordered-list u-margin_below u-color--black">
+      <li>Vijay Anand</li>
+      <li>Vikram Ravi</li>
+      <li>Sachin Narula</li>
+      <li>Renuka Jaypal</li>
+      <li>Fazil Badrudeen</li>
+      <li>Mahadevan Jayaram</li>
+      <li>Venkatesh</li>
+      <li>Kumaresh Chinnaswamy</li>
+      <li>David</li>
+      <li>Ashok</li>
+      <li>Ratheesh</li>
+      <li>Sakthivel Pannerselvam</li>
+      <li>Amar Ramesh</li>
+      <li>Deepak Dennison</li>      
+      <li>Ramki</li>
+      <li>Siddharth Ganneriwala</li>
+      <li>Ravi Kumar</li>
+      <li>Divya Sharma</li>
+      <li>Saradha Ramani</li>
+      <li>Wilfred Davidar</li>
+      <li>Shravan Shankar</li>
+      <li>Murshitha Sheeren</li>
+      <li>Harshini</li>
+      <li>Jayalakshmi Krishnan</li>
     </ul>
    </div>
 </div>
