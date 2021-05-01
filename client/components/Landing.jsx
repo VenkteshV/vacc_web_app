@@ -57,7 +57,7 @@ class Landing extends Component {
     ctx.drawImage(vacImg, 0, 0);
 
     ctx.textAlign = 'right';
-    var x = canvas.width - ((canvas.width / 10) * 1);
+    var x = canvas.width - ((canvas.width / 20) * 1);
     ctx.font = "16pt 'Baloo Thambi 2'";
     ctx.fillStyle = 'white';
     ctx.fillText("Thank you", x, 70);
@@ -68,13 +68,13 @@ class Landing extends Component {
     ctx.font = "bold 28pt 'Baloo Thambi 2'";
     ctx.fillText(this.props.latestUser, x, 118);
 
-    x = (canvas.width / 10) * 1;
+    x = (canvas.width / 20) * 1;
     ctx.textAlign = "left";
-    ctx.font = "16pt 'Baloo Thambi 2'";
+    ctx.font = "14pt 'Baloo Thambi 2'";
     ctx.fillStyle = '#040100';
     ctx.fillText("Virus Verattunga Natta Kappathunga", x, 450);
     ctx.font = "bold 18pt 'Baloo Thambi 2'";
-    ctx.fillText("PoCoronaPo.in", x, 500);
+    ctx.fillText("PoCoronaPo.in", x, 480);
 
     // ctx.fillStyle = 'blue';
     // ctx.fillRect(0,0,450,450);
