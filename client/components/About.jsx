@@ -56,7 +56,7 @@ export default class FAQ extends React.Component {
 <li>Sakthivel Pannerselvam, the6.in </li>
 <li>Amar Ramesh, Studio A </li>
 <li>Deepak, Prayogshala</li>
-<li>Sachin, Falcon.io </li>
+<li>Sachin Narula, Falcon.io </li>
 <li>Ramki, Thoughtworks </li>
 <li>Saradha Ramani, Rotary</li>
 <li>Wilfred Davidar, IAS Retd </li>

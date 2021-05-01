@@ -5,6 +5,7 @@ body {
   letter-spacing: rem(0.5);
   max-width: 480px;
   margin: auto;
+  position: relative;
 }
 
 .flex-container {
@@ -141,6 +142,7 @@ p {
   font-size: rem(18);
   padding-left: rem(20);
   text-align: left;
+  border: 0 !important;
 }
 .Questions {
   font-size: rem(16);
@@ -173,8 +175,20 @@ p {
 .Completed {
   display: inline-block;
 }
-.VaccineImg {
-width: 100%;
+.VaccineImg {  
+  width: 100%; 
+}
+
+.VaccineImgCover {  
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  object-fit: cover;
 }
 .Verbiage {
   font-size: rem(14);
@@ -204,10 +218,9 @@ padding-left:35px;
   height: rem(50);
   font-size: rem(16);
   padding-left: rem(16);
-  border: none !important;  
+  border: 1px solid lightgray;
   margin-bottom: rem(24);  
-  outline: 0 !important;  
-  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  outline: 0 !important;    
   border-radius: 8px;
   padding: rem(10) rem(15);
 }
@@ -239,18 +252,27 @@ padding-left:35px;
   }  
 }
 
+.BadgeWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+ 
+.BadgeContent {
+  padding: rem(40) rem(30);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  & + & {
+   flex: initial !important; 
+  }
+}
+
 .BadgeText {
-  position: absolute;
-  z-index: 979;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  font-weight: 500;
-  top: 8%;
-  text-align: center;
-  width: 60%;
-  font-size: 1rem;
   color: white;
+  font-weight: 500;
+  font-size: rem(19);
 }
 
 .TaskForce {
@@ -267,61 +289,32 @@ text-decoration-line: underline;
 color: #1D1D1D;
 }
 
-.BadgeConclusion {
-  position: absolute;
-  z-index: 979;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  font-weight: 500;
-  top: 26%;
-  text-align: center;
-  width: 60%;
-  font-size: 1rem;
+.BadgeConclusion {  
   color: white;
+  font-size: rem(17);
 }
 
-.Badgebottom {
-  position: absolute;
-  margin-top: 25rem;
-  right: 5rem;
-  width: 60%;
-  font-family: Baloo Thambi 2;
-  font-size: 1rem;
+.Badgebottom {  
+  font-size: rem(19);
   font-weight:bold;
   color: #040100;
+  margin-bottom: 5px;
 }
 .BadgeMiddle {
-  position: absolute;
-  margin-top: 27rem;
-  right: 5rem;
-  width: 60%;
-  font-family: Baloo Thambi 2;
-  font-size: 14px;
+  font-size: rem(16);
   font-weight:300;
   color: #020102;
 }
 .BadgeBottomConclusion {
-  position: absolute;
-  margin-top: 31rem;
-  right: 5rem;
-  width: 60%;
-  font-family: Baloo Thambi 2;
-  font-size: 18px;
-  font-weight:bold;
+  font-size: rem(19);
+  font-weight: bold;
   color: #020102;
+  margin-top: 20px;
 }
 .BadgeUser {
-  position: absolute;
-  z-index: 979;
-  margin: 0 auto;
-  right: 121px;
-  font-weight: bold;
-  top: 80%;
-  text-align: center;
-  width: 60%;
-  font-size: 2.5rem;
   color: white;
+  font-size: rem(26);
+  font-weight: 700;
 }
 
 .PledgeHeader {
@@ -472,16 +465,9 @@ font-size: 3rem
 }
 
 .Share {
-  width: 90%;
   background-color:#D93141 !important;
-  position: absolute;
-  margin-top: 32rem;
-  right: 5rem;
-  width: 60%;
-  font-family: Baloo Thambi 2;
-  font-size: 18px;
-  font-weight: bold;
-  color: #020102;
+  margin-top: 22px;
+  border: 0;
 }
 
 .ordered-list {

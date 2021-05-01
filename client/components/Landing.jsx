@@ -186,7 +186,7 @@ class Landing extends Component {
     const FooterClassName = this.state.shouldRenderCancel ? 'FooterTabs': 'Footer';
     console.log("renderfaq", this.props.renderBadge);
     return (
-      <div>
+      <div className="BadgeWrapper">
 
 
 
@@ -201,12 +201,17 @@ class Landing extends Component {
                 </li>
               ))}
             </ul> </div>) : (null)} */}
-        {this.props.renderBadge ? (<div><img className="VaccineImg" src={VisitAgainImg}></img>
-        <span className="BadgeText"> Thank you <br /> <span className="BadgeUser">{this.props.latestUser} <br />  </span></span>
-          <span className="BadgeConclusion">for joining the drive to flatten the curve.</span>
-          <span className="Badgebottom">Oosi Podu pledge <br/></span> 
-          <span className="BadgeMiddle">Virus a verattunga. Natta Kappathunga.<br/> </span> 
-          <span className="BadgeBottomConclusion">Visit oosipodu.in</span>
+        {this.props.renderBadge ? (<div><img className="VaccineImgCover" src={VisitAgainImg}></img>
+          <div class="BadgeContent u-text--right">
+            <p className="BadgeText"> Thank you <br /> <span className="BadgeUser">{this.props.latestUser} <br />  </span></p>
+            <p className="BadgeConclusion">for joining the drive to <br /> flatten the curve.</p>
+          </div>
+
+          <div class="BadgeContent">  
+            <p className="Badgebottom">Oosi Podu pledge <br/></p> 
+            <p className="BadgeMiddle">Virus a verattunga. Natta Kappathunga.<br/> </p> 
+            <p className="BadgeBottomConclusion">Visit oosipodu.in</p>
+          </div>  
           <Button
         className="Share"
         onClick={this.shareBadge}
