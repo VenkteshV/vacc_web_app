@@ -518,7 +518,40 @@ font-size: 3rem
   border-radius: 8px;
   padding: rem(10) rem(15);
 }
+.LangToggle {
+left: 235px;
+right: 73px;
+top: 39px;
+bottom: 591px;
+margin-left:39px;
+font-size: 1rem;
+border: 1px solid #FDF316;
+box-sizing: border-box;
+border-radius: 5px;
+}
 
+.English {
+  border-radius: 5px;
+    background-color: #FDF316;
+    font-size: 1rem;
+    display: inline-block;
+  }
+.Tamil {
+  border-radius: 5px;
+    font-size: 1rem;
+    display: inline-block;
+  }
+  .TamilChecked {
+    border-radius: 5px;
+    background-color: #FDF316;
+      font-size: 1rem;
+      display: inline-block;
+    }
+    .EnglishUnchecked {
+      border-radius: 5px;
+        font-size: 1rem;
+        display: inline-block;
+      }
 .checkboxContainer input {
   position: absolute;
   opacity: 0;

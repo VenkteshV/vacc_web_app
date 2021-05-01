@@ -78,7 +78,7 @@ export default class PledgePage extends React.Component {
           name="name"
           placeholder="Name (enter only alphabets)"
           type="text"
-          pattern="[A-Za-z]+"
+          pattern="[A-Za-z\s]+"
           value={this.state.name}
           className="ReasonText PledgeText"
           onChange={this.handleNameChange}

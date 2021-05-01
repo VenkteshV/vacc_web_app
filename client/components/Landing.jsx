@@ -12,6 +12,9 @@ import Select from 'react-select';
 import PropTypes from 'prop-types';
 import CancelPage from './CancelPage.jsx';
 import PledgePage from './PledgePage.jsx';
+import {translations} from '../constants/translations';
+
+
 
 class Landing extends Component {
   constructor(props) {
@@ -33,7 +36,8 @@ class Landing extends Component {
       numberVaccinated: { 'number': props.config.progressData.response.count, 'text': props.config.progressData.response.count },
       shouldRenderFaq: false,
       shouldRenderCancel: false,
-      shouldRenderPledgeForm: false
+      shouldRenderPledgeForm: false,
+      tamil:false
     };
     this.renderFaq = this.renderFaq.bind(this);
     this.toggleFaq = this.toggleFaq.bind(this);
@@ -42,6 +46,7 @@ class Landing extends Component {
     this.renderPledgeForm = this.renderPledgeForm.bind(this);
     this.togglePledge = this.togglePledge.bind(this);
     this.shareBadge = this.shareBadge.bind(this);
+    this.handleLangToggle = this.handleLangToggle.bind(this);
   }
 
 
@@ -109,6 +114,9 @@ class Landing extends Component {
     
   }
 
+  handleLangToggle() {
+    this.setState({tamil:!this.state.tamil});
+  }
 
   renderCancel() {
     this.setState({ shouldRenderCancel: true });
@@ -191,6 +199,9 @@ class Landing extends Component {
 
 
   render() {
+    const tamilClass = this.state.tamil ? 'TamilChecked':'Tamil';
+    const englishClass = !this.state.tamil ? 'English':'EnglishUnchecked';
+
     const now_date = new Date();
     let time_diff1 = now_date - (new Date(this.props.config.progressData.response.recents[0].timestamp));
     let time_diff2 = now_date - (new Date(this.props.config.progressData.response.recents[1].timestamp));
@@ -222,8 +233,8 @@ class Landing extends Component {
           </div>
 
           <div className="BadgeContent">  
-            <p className="Badgebottom">Po Corona Po <br/></p> 
-            <p className="BadgeMiddle">Virus a verattunga. Natta Kappathunga.<br/> </p> 
+            <p className="Badgebottom">{this.state.tamil ? translations.header.tamil:translations.header.english} <br/></p> 
+            <p className="BadgeMiddle">{this.state.tamil ? translations.middleText.tamil:translations.middleText.english}<br/> </p> 
             <p className="BadgeBottomConclusion">Visit PoCoronaPo.in</p>
           </div>  
           <Button
@@ -254,7 +265,7 @@ class Landing extends Component {
             {/* <div className="Content">
   </div> */}
             <About />
-          </div>) : (<div> <div className="card_lo"> Po Corona Po </div> <div>
+          </div>) : (<div> <div className="card_lo"> {this.state.tamil ? translations.header.tamil:translations.header.english}  <div className="LangToggle" onClick={this.handleLangToggle}> <span className={tamilClass}>தமிழ்</span> <span className={englishClass}>English</span> </div></div>  <div>
             <img className="VaccineImg" src={VaccineImg} />
 
             <div className="VaccineCard">
@@ -270,7 +281,7 @@ class Landing extends Component {
                   <p className="u-text--left u-margin_above u-margin_left text-size-14">
                   <span className="Completed u-margin_left"> {this.props.config.progressData.response.recents[1].name}
                   <span className="u-color-grey-10"> signed {minutesDifference2} minutes ago</span></span> </p>
-                  <div className="u-text--left"><span className="Verbiage Mission"> Namma Natta Namma Dhaan Kapathanam. Let’s all sign this to start a movement that will inspire everyone to follow all the basic prevention against corona to fight the virus.  </span></div>
+                  <div className="u-text--left"><span className="Verbiage Mission"> {this.state.tamil ? translations.mission.tamil:translations.mission.english}  </span></div>
                   
                   <div className="Actions">{this.renderActions()}</div>
                   
