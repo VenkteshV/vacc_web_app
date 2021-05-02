@@ -4,6 +4,7 @@ import Logo from "../images/baseline-check_circle_outline-24px.svg";
 import VaccineImg from "../images/Banner.png";
 import VisitAgainImg from "../images/visit_again.png"
 import ChennaiTricolor from '../images/chennai_tricolor.png';
+import ChennaiVolTaskForce from '../images/taskforce.jpg';
 import { Button, ProgressBar, Tabs, Tab } from 'react-bootstrap';
 import FAQ from './FAQ.jsx';
 import About from './About.jsx';
@@ -298,6 +299,7 @@ class Landing extends Component {
   </Tab> */}
           </Tabs>
           <div className="TricolorImage">
+            <img className="ChennaiVolTaskForce" src={ChennaiVolTaskForce}></img>
             <img className="ChennaiTricolor" src={ChennaiTricolor}></img>
           </div>
         </div>)

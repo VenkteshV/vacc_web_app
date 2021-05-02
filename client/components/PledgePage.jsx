@@ -63,7 +63,7 @@ export default class PledgePage extends React.Component {
                     <div className="CancelCardBg">            
                         <ol className="ordered-list u-margin_below">
                             <li>Masku Podu. Oosi Podu.</li>
-                            <li>Unverified Msgs Forward Pannadhe.</li>
+                            <li>Unverified-a Forward Anupadhe.</li>
                             <li>Konjam Thalli Nillu.</li>
                         </ol>
                         

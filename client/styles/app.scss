@@ -100,10 +100,11 @@ p {
   max-width: 480px;  
   position: relative;
   height: rem(50);
+  background: white;
 }
 
 .FaqTabs {
-  width:80%;
+  width:50%;
   height: 100%;
   float: left;
   background-color: white;
@@ -111,11 +112,15 @@ p {
   align-items: center;
 }
 
-.ChennaiTricolor {
+.ChennaiTricolor,
+.ChennaiVolTaskForce {
   width: 90%;
   background-color: white;;
-
 }
+.ChennaiVolTaskForce + .ChennaiTricolor {
+  margin-left: 20px;
+}
+
 .Latest {
   text-align: left;
   padding-left: 35px;
@@ -124,8 +129,7 @@ p {
   display: flex;
   align-items: center;
   width:20%;
-  height: 100%;
-  float: right;
+  height: 100%;  
   background-color: white;
 }
 .nav {
@@ -519,43 +523,27 @@ font-size: 3rem
   padding: rem(10) rem(15);
 }
 .LangToggle, .LangTamil {
-left: 235px;
-right: 73px;
-top: 39px;
-bottom: 591px;
-margin-left:39px;
-font-size: 1rem;
-border: 1px solid #FDF316;
-box-sizing: border-box;
-border-radius: 5px;
+  border: 1px solid #FDF316;
+  border-radius: 5px;
+  margin-left: auto;
+  overflow: hidden;
+  min-width: 112px;
+  white-space: nowrap;
 }
 
-.LangTamil {
-width:62%
+.English, .TamilChecked {    
+    background-color: #FDF316;
+    font-size: rem(14);
+    display: inline-block;
+    padding: 5px;
 }
 
-.English {
-  border-radius: 5px;
-    background-color: #FDF316;
-    font-size: 1rem;
-    display: inline-block;
-  }
-.Tamil {
-  border-radius: 5px;
-    font-size: 1rem;
-    display: inline-block;
-  }
-  .TamilChecked {
-    border-radius: 5px;
-    background-color: #FDF316;
-      font-size: 1rem;
-      display: inline-block;
-    }
-    .EnglishUnchecked {
-      border-radius: 5px;
-        font-size: 1rem;
-        display: inline-block;
-      }
+.Tamil, .EnglishUnchecked {
+  display: inline-block;
+  font-size: rem(14);
+  padding: 5px;
+}
+
 .checkboxContainer input {
   position: absolute;
   opacity: 0;
