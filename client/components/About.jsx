@@ -35,9 +35,10 @@ export default class FAQ extends React.Component {
       <li>Vikram Ravi</li>
       <li>Sachin Narula</li>
       <li>Renuka Jaypal</li>
+      <li> Siddharth NA </li>
       <li>Fazil Badrudeen</li>
       <li>Mahadevan Jayaram</li>
-      <li>Venkatesh</li>
+      <li>Venktesh</li>
       <li>Kumaresh Chinnaswamy</li>
       <li>David</li>
       <li>Ashok</li>
